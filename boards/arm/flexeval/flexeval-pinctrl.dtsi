@@ -1,0 +1,28 @@
+/*
+ * Copyright 2022 Daniel DeGrasse <daniel@degrasse.com>
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+
+#include <nxp/kinetis/MK22FX512VLQ12-pinctrl.h>
+
+&pinctrl {
+	uart0_default: uart0_default {
+		group0 {
+			pinmux = <UART0_RX_PTB16>,
+				<UART0_TX_PTB17>;
+			drive-strength = "low";
+			slew-rate = "fast";
+		};
+	};
+
+	i2c2_default: i2c2_default {
+		group0 {
+			pinmux = <I2C2_SCL_PTA12>,
+				<I2C2_SDA_PTA13>;
+			drive-strength = "low";
+			drive-open-drain;
+			slew-rate = "fast";
+		};
+	};
+};

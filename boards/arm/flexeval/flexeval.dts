@@ -1,0 +1,105 @@
+/*
+ * Copyright 2022 Daniel DeGrasse
+ *
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+/dts-v1/;
+
+#include <nxp/nxp_k22fxq512.dtsi>
+#include "flexeval-pinctrl.dtsi"
+
+/ {
+	model = "FlexEval Led Kit";
+	compatible = "flexeval";
+
+	aliases {
+		led0 = &green_led;
+		led1 = &red_led;
+	};
+
+	chosen {
+		zephyr,sram = &sram0;
+		zephyr,flash = &flash0;
+		zephyr,console = &uart0;
+		zephyr,shell-uart = &uart0;
+		zephyr,uart-pipe = &uart0;
+	};
+
+	leds {
+		compatible = "gpio-leds";
+		green_led: led_0 {
+			gpios = <&gpioe 24 0>;
+			label = "User LD1";
+		};
+		red_led: led_1 {
+			gpios = <&gpioe 25 0>;
+			label = "User LD2";
+		};
+	};
+};
+
+&i2c2 {
+	status = "okay";
+	pinctrl-0 = <&i2c2_default>;
+	pinctrl-names = "default";
+};
+
+&sim {
+	pllfll-select = <KINETIS_SIM_PLLFLLSEL_MCGPLLCLK>;
+	er32k-select = <KINETIS_SIM_ER32KSEL_RTC>;
+};
+
+&uart0 {
+	status = "okay";
+	current-speed = <115200>;
+	pinctrl-0 = <&uart0_default>;
+	pinctrl-names = "default";
+};
+
+&gpioe {
+	status = "okay";
+};
+
+zephyr_udc0: &usbotg {
+	compatible = "nxp,kinetis-usbd";
+	status = "okay";
+	num-bidir-endpoints = <8>;
+};
+
+&flash0 {
+	partitions {
+		compatible = "fixed-partitions";
+		#address-cells = <1>;
+		#size-cells = <1>;
+
+		boot_partition: partition@0 {
+			label = "mcuboot";
+			reg = <0x00000000 0x00010000>;
+			read-only;
+		};
+		slot0_partition: partition@10000 {
+			label = "image-0";
+			reg = <0x00010000 0x00020000>;
+		};
+		slot1_partition: partition@30000 {
+			label = "image-1";
+			reg = <0x00030000 0x00020000>;
+		};
+		scratch_partition: partition@50000 {
+			label = "image-scratch";
+			reg = <0x00050000 0x00010000>;
+		};
+
+		/*
+		 * The flash starting at 0x00060000 and ending at
+		 * 0x0007ffff (sectors 16-31) is reserved for use
+		 * by the application.
+		 */
+		storage_partition: partition@60000 {
+			label = "storage";
+			reg = <0x00060000 0x00020000>;
+		};
+
+	};
+};

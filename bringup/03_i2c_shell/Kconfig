@@ -1,0 +1,12 @@
+# Copyright 2022 Daniel DeGrasse
+# SPDX-License-Identifier: Apache-2.0
+
+source "Kconfig.zephyr"
+
+config ENABLE_DEBUG_LOOP
+    bool "Enable debug loop at boot"
+    default y
+    select PLATFORM_SPECIFIC_INIT
+    help
+      Hold device in loop at platform boot. Can be disabled once
+      device is confirmed to be stable.

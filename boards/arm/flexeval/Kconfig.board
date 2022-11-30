@@ -1,0 +1,7 @@
+# Copyright 2022 Daniel DeGrasse
+# SPDX-License-Identifier: Apache-2.0
+
+config BOARD_FLEXEVAL
+	bool "FlexEval LED Kit"
+	depends on SOC_SERIES_KINETIS_K2X
+	select SOC_PART_NUMBER_MK22FX512VLQ12

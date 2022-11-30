@@ -1,0 +1,15 @@
+# Copyright (c) 2019 Nordic Semiconductor ASA
+# SPDX-License-Identifier: Apache-2.0
+
+config USB_DEVICE_PID
+	default USB_PID_CDC_ACM_SAMPLE
+
+config ENABLE_DEBUG_LOOP
+    bool "Enable debug loop at boot"
+    default y
+    select PLATFORM_SPECIFIC_INIT
+    help
+      Hold device in loop at platform boot. Can be disabled once
+      device is confirmed to be stable.
+
+source "Kconfig.zephyr"

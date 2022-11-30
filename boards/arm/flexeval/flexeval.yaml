@@ -1,0 +1,10 @@
+identifier: flexeval
+name: FlexEval Led Kit
+type: mcu
+arch: arm
+ram: 64
+toolchain:
+  - zephyr
+  - gnuarmemb
+supported:
+  - gpio
