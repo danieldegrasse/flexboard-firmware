@@ -1,0 +1,2 @@
+source "Kconfig.zephyr"
+rsource "src/led_matrix/Kconfig"
