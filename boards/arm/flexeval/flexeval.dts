@@ -6,7 +6,9 @@
 
 /dts-v1/;
 
+#include <zephyr/dt-bindings/gpio/gpio.h>
 #include <nxp/nxp_k22fxq512.dtsi>
+
 #include "flexeval-pinctrl.dtsi"
 
 / {
@@ -43,6 +45,25 @@
 	status = "okay";
 	pinctrl-0 = <&i2c2_default>;
 	pinctrl-names = "default";
+	temp_sensor: tcn75a@48 {
+		reg = <0x48>;
+		compatible = "microchip,tcn75a";
+		alert-gpios = <&gpioe 10 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+	};
+	led_ctrl1: is31fl3733@50 {
+		reg = <0x50>;
+		compatible = "issi,is31fl3733";
+		sdb-gpios = <&gpioe 4 GPIO_ACTIVE_HIGH>;
+		abm-ramp-up = <560>;
+		abm-ramp-down = <560>;
+	};
+	led_ctrl2: is31fl3733@5f {
+		reg = <0x5F>;
+		compatible = "issi,is31fl3733";
+		sdb-gpios = <&gpioe 7 GPIO_ACTIVE_HIGH>;
+		abm-ramp-up = <50>;
+		abm-ramp-down = <50>;
+	};
 };
 
 &sim {
