@@ -1,0 +1,5 @@
+
+
+module = LED_MATRIX
+module-str = led_matrix
+source "subsys/logging/Kconfig.template.log_config"
