@@ -220,7 +220,7 @@ static int led_blink_test(struct led_matrix *inst)
 	printk("%s: Blink LEDs with low delay \n", __func__);
 	for (uint8_t row = 0; row < SW_ROW_COUNT; row++) {
 		for (uint8_t col = 0; col < SW_COL_COUNT; col++) {
-			ret = led_matrix_blink(inst, row, col, 560, 560);
+			ret = led_matrix_blink(inst, row, col, 2500, 560);
 			if (ret < 0) {
 				printk("Error: could not set blink mode: (%d)\n", ret);
 				return ret;
@@ -228,7 +228,9 @@ static int led_blink_test(struct led_matrix *inst)
 		}
 	}
 	printk("LED blink routine took %llu ms\n", k_uptime_delta(&delta));
-	k_msleep(5000);
+	while (1) {
+		k_msleep(25000);
+	}
 	return 0;
 }
 
