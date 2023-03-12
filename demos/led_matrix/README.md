@@ -15,6 +15,9 @@ This demo application drives two 6x8 led matrices. It drives matrix 1 first,
 then repeats the same test sequence for matrix 2.
 
 The following steps are performed:
+- led_blink test:
+  - set all LEDs to blink with a long on time, and short off time
+  - delay for 5ms so user can observe auto breathe mode functioning
 - led_channel_write test:
   - set all leds to full brightness
   - set alternating leds to dim brightness

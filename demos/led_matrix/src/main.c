@@ -228,9 +228,7 @@ static int led_blink_test(struct led_matrix *inst)
 		}
 	}
 	printk("LED blink routine took %llu ms\n", k_uptime_delta(&delta));
-	while (1) {
-		k_msleep(25000);
-	}
+	k_msleep(5000);
 	return 0;
 }
 
