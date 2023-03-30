@@ -7,6 +7,7 @@
 #include <zephyr/kernel.h>
 #include <zephyr/device.h>
 #include <zephyr/drivers/led.h>
+#include <zephyr/drivers/led/is31fl3733.h>
 
 #include "led_matrix.h"
 
@@ -125,7 +126,18 @@ int led_brightness(struct led_matrix *inst)
 			k_msleep(100);
 		}
 	}
-	/* Phase 3: Clear LED brightness sequentially */
+	/* Phase 3: Dim LEDs with global current control */
+	printk("%s: Lower global led current\n", __func__);
+	ret = is31fl3733_current_limit(inst->led_dev, 0x80);
+	if (ret < 0) {
+		printk("Could not lower led current: %d\n", ret);
+	}
+	k_msleep(1000);
+	ret = is31fl3733_current_limit(inst->led_dev, 0xFF);
+	if (ret < 0) {
+		printk("Could not raise led current: %d\n", ret);
+	}
+	/* Phase 4: Clear LED brightness sequentially */
 	printk("%s: Clear LED brightness in sequence\n", __func__);
 	for (row = 0; row < SW_ROW_COUNT; row++) {
 		for (col = 0; col < SW_COL_COUNT; col++) {
@@ -211,6 +223,8 @@ int led_channel_write(struct led_matrix *inst)
 	return 0;
 }
 
+#ifdef CONFIG_IS31FL3733_BLINK_API
+
 static int led_blink_test(struct led_matrix *inst)
 {
 	int ret;
@@ -218,19 +232,56 @@ static int led_blink_test(struct led_matrix *inst)
 
 	/* Phase 1: blink LEDs with low delay */
 	printk("%s: Blink LEDs with low delay \n", __func__);
+	/* Blank all LEDs before setting output */
+	ret = is31fl3733_blank(inst->led_dev, true);
+	if (ret < 0) {
+		printk("Error: led panel could not be blanked\n");
+	}
 	for (uint8_t row = 0; row < SW_ROW_COUNT; row++) {
 		for (uint8_t col = 0; col < SW_COL_COUNT; col++) {
-			ret = led_matrix_blink(inst, row, col, 2500, 560);
+			ret = led_matrix_blink(inst, row, col,
+				IS31FL3733_ON_DELAY(560, 2500),
+				IS31FL3733_OFF_DELAY(560, 560));
 			if (ret < 0) {
 				printk("Error: could not set blink mode: (%d)\n", ret);
 				return ret;
 			}
 		}
 	}
+	ret = is31fl3733_blank(inst->led_dev, false);
+	if (ret < 0) {
+		printk("Error: led panel blank could not be disabled\n");
+	}
 	printk("LED blink routine took %llu ms\n", k_uptime_delta(&delta));
 	k_msleep(5000);
 	return 0;
 }
+
+static int led_sync_test(struct led_matrix *inst1, struct led_matrix *inst2)
+{
+	int ret;
+
+	/* Phase 1: blink LEDs with low delay */
+	printk("%s: Blink LEDs on both controllers with low delay \n", __func__);
+	for (uint8_t row = 0; row < SW_ROW_COUNT; row++) {
+		for (uint8_t col = 0; col < SW_COL_COUNT; col++) {
+			ret = led_matrix_blink(inst1, row, col,
+				IS31FL3733_ON_DELAY(560, 2500),
+				IS31FL3733_OFF_DELAY(560, 560));
+			ret = led_matrix_blink(inst2, row, col,
+				IS31FL3733_ON_DELAY(560, 2500),
+				IS31FL3733_OFF_DELAY(560, 560));
+			if (ret < 0) {
+				printk("Error: could not set blink mode: (%d)\n", ret);
+				return ret;
+			}
+		}
+	}
+	k_msleep(5000);
+	return 0;
+}
+
+#endif /* CONFIG_IS31FL3733_BLINK_API */
 
 void main(void)
 {
@@ -244,10 +295,12 @@ void main(void)
 		return;
 	}
 	while (1) {
+#ifdef CONFIG_IS31FL3733_BLINK_API
 		ret = led_blink_test(&mat1);
 		if (ret < 0) {
 			return;
 		}
+#endif
 		ret = led_channel_write(&mat1);
 		if (ret < 0) {
 			return;
@@ -260,10 +313,12 @@ void main(void)
 		if (ret < 0) {
 			return;
 		}
+#ifdef CONFIG_IS31FL3733_BLINK_API
 		ret = led_blink_test(&mat2);
 		if (ret < 0) {
 			return;
 		}
+#endif
 		ret = led_channel_write(&mat2);
 		if (ret < 0) {
 			return;
@@ -276,5 +331,11 @@ void main(void)
 		if (ret < 0) {
 			return;
 		}
+#ifdef CONFIG_IS31FL3733_BLINK_API
+		ret = led_sync_test(&mat1, &mat2);
+		if (ret < 0) {
+			return;
+		}
+#endif
 	}
 }
