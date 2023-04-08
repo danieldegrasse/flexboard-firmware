@@ -223,8 +223,6 @@ int led_channel_write(struct led_matrix *inst)
 	return 0;
 }
 
-#ifdef CONFIG_IS31FL3733_BLINK_API
-
 static int led_blink_test(struct led_matrix *inst)
 {
 	int ret;
@@ -281,8 +279,6 @@ static int led_sync_test(struct led_matrix *inst1, struct led_matrix *inst2)
 	return 0;
 }
 
-#endif /* CONFIG_IS31FL3733_BLINK_API */
-
 void main(void)
 {
 	int ret;
@@ -295,12 +291,10 @@ void main(void)
 		return;
 	}
 	while (1) {
-#ifdef CONFIG_IS31FL3733_BLINK_API
 		ret = led_blink_test(&mat1);
 		if (ret < 0) {
 			return;
 		}
-#endif
 		ret = led_channel_write(&mat1);
 		if (ret < 0) {
 			return;
@@ -313,13 +307,10 @@ void main(void)
 		if (ret < 0) {
 			return;
 		}
-#ifdef CONFIG_IS31FL3733_BLINK_API
 		ret = led_blink_test(&mat2);
 		if (ret < 0) {
 			return;
 		}
-#endif
-		ret = led_channel_write(&mat2);
 		if (ret < 0) {
 			return;
 		}
@@ -331,11 +322,9 @@ void main(void)
 		if (ret < 0) {
 			return;
 		}
-#ifdef CONFIG_IS31FL3733_BLINK_API
 		ret = led_sync_test(&mat1, &mat2);
 		if (ret < 0) {
 			return;
 		}
-#endif
 	}
 }
