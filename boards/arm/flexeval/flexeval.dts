@@ -54,15 +54,11 @@
 		reg = <0x50>;
 		compatible = "issi,is31fl3733";
 		sdb-gpios = <&gpioe 4 GPIO_ACTIVE_HIGH>;
-		abm-ramp-up = <560>;
-		abm-ramp-down = <560>;
 	};
 	led_ctrl2: is31fl3733@5f {
 		reg = <0x5F>;
 		compatible = "issi,is31fl3733";
 		sdb-gpios = <&gpioe 7 GPIO_ACTIVE_HIGH>;
-		abm-ramp-up = <50>;
-		abm-ramp-down = <50>;
 	};
 };
 
