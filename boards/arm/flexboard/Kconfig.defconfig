@@ -1,0 +1,21 @@
+# Copyright 2023 Daniel DeGrasse
+# SPDX-License-Identifier: Apache-2.0
+
+if BOARD_FLEXBOARD
+
+config BOARD
+	default "flexboard"
+
+config OSC_XTAL0_FREQ
+	default 8000000
+
+config MCG_PRDIV0
+	default 0x3
+
+config MCG_VDIV0
+	default 0xc
+
+config MCG_FCRDIV
+	default 0
+
+endif # BOARD_FLEXBOARD
