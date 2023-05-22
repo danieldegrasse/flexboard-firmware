@@ -1,0 +1,47 @@
+# The west manifest file for upstream Zephyr.
+#
+# The per-installation west configuration file, .west/config, sets the
+# path to the project containing this file in the [manifest] section's
+# "path" variable.
+#
+# You are free to create your own manifest files and put them in any
+# repository you want, to create your own custom Zephyr installations.
+# For example, you could create a manifest file in your own out of
+# tree application directory, which would pull this zephyr repository
+# in as an ordinary project.
+#
+# You can pass your manifest repositories to west init when creating a
+# new Zephyr installation. See the west documentation for more
+# information.
+
+manifest:
+  defaults:
+    remote: upstream
+
+  remotes:
+    - name: upstream
+      url-base: https://github.com/zephyrproject-rtos
+    - name: danieldegrasse
+      url-base: git@github.com:danieldegrasse
+
+  #
+  # Please add items below based on alphabetical order
+  projects:
+    - name: hal_nxp
+      revision: 4c992b5db0ea6960f910199dd50310d0f7a766c7
+      remote: danieldegrasse
+      path: modules/hal/nxp
+      groups:
+        - hal
+    - name: mcuboot
+      revision: 750678e33819b95756203e5db1ba827baee35708
+      path: bootloader/mcuboot
+    - name: zephyr
+      revision: 3af2da89fe74b6362b12e5d41cc6460df923f1be
+      remote: danieldegrasse
+      path: zephyr
+      import: false
+      west-commands: scripts/west-commands.yml
+
+  self:
+    path: apps
