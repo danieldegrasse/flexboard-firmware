@@ -1,0 +1,31 @@
+/*
+ * Enable GPIO port A, and add two dummy LED aliases. The flexboard has no
+ * LEDs present, so this overlay simply allows the test to build and run.
+ */
+
+/ {
+	aliases {
+		led0 = &dummy_led0;
+		led1 = &dummy_led1;
+	};
+
+	leds {
+		compatible = "gpio-leds";
+		dummy_led0: led_0 {
+			gpios = <&gpioa 24 0>;
+			label = "Dummy LED 0";
+		};
+		dummy_led1: led_1 {
+			gpios = <&gpioa 25 0>;
+			label = "Dummy LED 1";
+		};
+	};
+};
+
+
+
+
+
+&gpioa {
+	status = "okay";
+};
