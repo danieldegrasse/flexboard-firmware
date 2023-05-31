@@ -18,6 +18,7 @@
 	aliases {
 		led0 = &green_led;
 		led1 = &red_led;
+		mcuboot-button0 = &key1;
 	};
 
 	chosen {
@@ -26,6 +27,7 @@
 		zephyr,console = &uart0;
 		zephyr,shell-uart = &uart0;
 		zephyr,uart-pipe = &uart0;
+		zephyr,code-partition = &slot0_partition;
 	};
 
 	leds {
@@ -37,6 +39,14 @@
 		red_led: led_1 {
 			gpios = <&gpioe 25 0>;
 			label = "User LD2";
+		};
+	};
+
+	keys {
+		compatible = "gpio-keys";
+		key1: key1 {
+			gpios = <&gpioe 2 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
+				<&gpioe 8 GPIO_ACTIVE_HIGH>;
 		};
 	};
 };
