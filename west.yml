@@ -33,11 +33,22 @@ manifest:
       path: modules/hal/nxp
       groups:
         - hal
+    - name: cmsis
+      revision: 74981bf893e8b10931464b9945e2143d99a3f0a3
+      path: modules/hal/cmsis
+      groups:
+        - hal
     - name: mcuboot
-      revision: 750678e33819b95756203e5db1ba827baee35708
+      revision: f5ad98217043bb8552d0d6b669fead33a54b6c95
+      remote: danieldegrasse
       path: bootloader/mcuboot
+    - name: mbedtls
+      revision: 6e166050075688fd3cf3d0cb3fc34a1c52df2496
+      path: modules/crypto/mbedtls
+      groups:
+        - crypto
     - name: zephyr
-      revision: 3af2da89fe74b6362b12e5d41cc6460df923f1be
+      revision: 20870819c557f8ae81c504ac6c3d7a51dc3f3a54
       remote: danieldegrasse
       path: zephyr
       import: false
