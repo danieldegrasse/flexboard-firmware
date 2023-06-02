@@ -1,13 +1,14 @@
 # FlexBoard Firmware
 
-This repository contains firmware for the Flexboard.
+This repository contains firmware for the Flexboard and FlexEval kits
 
-Currently, this repository only contains bringup tests and board
-definitions for the FlexEval and Flexboard.
+Bringup code and some driver demos are included. The main firmware
+application (ZMK) is managed via the west manifest
 
 ### Note: Zephyr Base
 This repository is intended to be build against the downstream Zephyr branch
-[frozen/flexeval-branch](https://github.com/danieldegrasse/zephyr/tree/frozen/flexeval-branch) based on Zephyr 3.2
+[frozen/flexeval-branch](https://github.com/danieldegrasse/zephyr/tree/frozen/flexeval-branch)
+based on Zephyr 3.3
 
 ## Directories
 ### Bringup
@@ -19,3 +20,7 @@ on device hardware is functioning correctly.
 ### Boards
 This directory contains board definitions for the FlexEval and Flexboard
 boards
+
+### Demos
+This directory contains any driver demos for the FlexEval and Flexboard that
+have not been upstreamed into Zephyr.
