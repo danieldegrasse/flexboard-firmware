@@ -1,0 +1,29 @@
+/*
+ * Copyright 2023 Daniel DeGrasse
+ *
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+
+#define DEFAULT 0
+#define FUNC 1
+
+/ {
+	keymap {
+		compatible = "zmk,keymap";
+
+		/* Default layer implements 1-3 key matrix, and function key */
+		default_layer {
+			bindings = <&kp NUMBER_1 &kp NUMBER_2
+				&kp NUMBER_3 &mo FUNC>;
+		};
+
+		/* Function layer implements special keypresses */
+		function_layer {
+			bindings = <&bootloader &kp C_NEXT
+				&kp C_PLAY_PAUSE &kp C_MUTE>;
+		};
+	};
+};
