@@ -24,3 +24,9 @@ boards
 ### Demos
 This directory contains any driver demos for the FlexEval and Flexboard that
 have not been upstreamed into Zephyr.
+
+### ZMK Config
+This directory contains ZMK configuration including keymaps and board settings.
+These settings are kept separate from the base board definition so that
+the base board definition can still be used to build zephyr sample
+applications.

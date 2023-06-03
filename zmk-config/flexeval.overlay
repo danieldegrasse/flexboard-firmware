@@ -1,0 +1,23 @@
+/*
+ * Copyright 2023 Daniel DeGrasse
+ *
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+#include <dt-bindings/zmk/matrix_transform.h>
+
+/ {
+	chosen {
+		zmk,kscan = &kscan0;
+	};
+
+	kscan0: kscan {
+		compatible = "zmk,kscan-gpio-matrix";
+		label = "KSCAN";
+		diode-direction = "col2row";
+		row-gpios = <&gpioe 2 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
+		 	<&gpioe 3 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>;
+		col-gpios = <&gpioe 8 GPIO_ACTIVE_HIGH>,
+		 	<&gpioe 12 GPIO_ACTIVE_HIGH>;
+	};
+};
