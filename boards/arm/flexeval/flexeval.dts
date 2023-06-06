@@ -55,6 +55,7 @@
 	status = "okay";
 	pinctrl-0 = <&i2c2_default>;
 	pinctrl-names = "default";
+	clock-frequency = <I2C_BITRATE_FAST_PLUS>;
 	temp_sensor: tcn75a@48 {
 		reg = <0x48>;
 		compatible = "microchip,tcn75a";
