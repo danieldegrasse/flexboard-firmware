@@ -4,11 +4,44 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-#include <dt-bindings/zmk/matrix_transform.h>
+#include <animation.dtsi>
+#include <dt-bindings/zmk/animation.h>
+#include <dt-bindings/zmk/animation_compose.h>
+
+#define DUMMY_PIXEL &pixel 0 0
+/*
+ * Key zone definition. These indices are used by the animation driver to
+ * determine which keys to render pixels for. Since the LED controllers
+ * are only wired to a subset of all pixels updated in a led_write_channels
+ * call, we only place those keys within the zone.
+ *
+ *
+ * Pixel Map for the Flexeval (indices correspond to channel number
+ * in led_write_channels)
+ *           led_ctrl1                          led_ctrl2
+ * --------------------------------------------------------------
+ * | 0  | 1  | 2  | 3  | 4  | 5  || 0  | 1  | 2  | 3  | 4  | 5  |
+ * | 16 | 17 | 18 | 19 | 20 | 21 || 16 | 17 | 18 | 19 | 20 | 21 |
+ * | 32 | 33 | 34 | 35 | 36 | 37 || 32 | 33 | 34 | 35 | 36 | 37 |
+ * | 48 | 49 | 50 | 51 | 52 | 53 || 48 | 49 | 50 | 51 | 52 | 53 |
+ * | 64 | 65 | 66 | 67 | 68 | 69 || 64 | 65 | 66 | 67 | 68 | 69 |
+ * | 80 | 81 | 82 | 83 | 84 | 85 || 80 | 81 | 82 | 83 | 84 | 85 |
+ * | 96 | 97 | 98 | 99 | 100| 101|| 96 | 97 | 98 | 99 | 100| 101|
+ * | 112| 113| 114| 115| 116| 117|| 112| 113| 114| 115| 116| 117|
+ * --------------------------------------------------------------
+ */
+#define ZONE_KEYS 0 1 2 3 4 5 16 17 18 19 20 21 32 33 34 35 36 37 \
+	48 49 50 51 52 53 64 65 66 67 68 69 80 81 82 83 84 85 96 97 \
+	98 99 100 101 112 113 114 115 116 117 \
+	128 129 130 131 132 133 144 145 146 147 148 149 160 161 162 \
+	163 164 165 176 177 178 179 180 181 192 193 194 195 196 197 \
+	208 209 210 211 212 213 224 225 226 227 228 229 240 241 242 \
+	243 244 245
 
 / {
 	chosen {
 		zmk,kscan = &kscan0;
+		zmk,animation = &root_animation;
 	};
 
 	kscan0: kscan {
@@ -19,5 +52,289 @@
 		 	<&gpioe 3 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>;
 		col-gpios = <&gpioe 8 GPIO_ACTIVE_HIGH>,
 		 	<&gpioe 12 GPIO_ACTIVE_HIGH>;
+	};
+
+	/*
+	 * Pixel definitions are given with coordinates from 0-255.
+	 * since we have two led controllers we give each block of 118 pixels
+	 * sequentially.
+	 */
+
+	animation {
+		compatible = "zmk,animation";
+		drivers = <&led_ctrl1 &led_ctrl2>;
+		chain-lengths = <128 128>;
+		pixels = <&pixel 0 0>,
+			<&pixel 21 0>,
+			<&pixel 42 0>,
+			<&pixel 63 0>,
+			<&pixel 84 0>,
+			<&pixel 105 0>,
+			<&pixel 126 0>,
+			<DUMMY_PIXEL>,
+			<DUMMY_PIXEL>,
+			<DUMMY_PIXEL>,
+			<DUMMY_PIXEL>,
+			<DUMMY_PIXEL>,
+			<DUMMY_PIXEL>,
+			<DUMMY_PIXEL>,
+			<DUMMY_PIXEL>,
+			<DUMMY_PIXEL>,
+			<&pixel 0 32>,
+			<&pixel 21 32>,
+			<&pixel 42 32>,
+			<&pixel 63 32>,
+			<&pixel 84 32>,
+			<&pixel 105 32>,
+			<&pixel 126 32>,
+			<DUMMY_PIXEL>,
+			<DUMMY_PIXEL>,
+			<DUMMY_PIXEL>,
+			<DUMMY_PIXEL>,
+			<DUMMY_PIXEL>,
+			<DUMMY_PIXEL>,
+			<DUMMY_PIXEL>,
+			<DUMMY_PIXEL>,
+			<DUMMY_PIXEL>,
+			<&pixel 0 64>,
+			<&pixel 21 64>,
+			<&pixel 42 64>,
+			<&pixel 63 64>,
+			<&pixel 84 64>,
+			<&pixel 105 64>,
+			<&pixel 126 64>,
+			<DUMMY_PIXEL>,
+			<DUMMY_PIXEL>,
+			<DUMMY_PIXEL>,
+			<DUMMY_PIXEL>,
+			<DUMMY_PIXEL>,
+			<DUMMY_PIXEL>,
+			<DUMMY_PIXEL>,
+			<DUMMY_PIXEL>,
+			<DUMMY_PIXEL>,
+			<&pixel 0 96>,
+			<&pixel 21 96>,
+			<&pixel 42 96>,
+			<&pixel 63 96>,
+			<&pixel 84 96>,
+			<&pixel 105 96>,
+			<&pixel 126 96>,
+			<DUMMY_PIXEL>,
+			<DUMMY_PIXEL>,
+			<DUMMY_PIXEL>,
+			<DUMMY_PIXEL>,
+			<DUMMY_PIXEL>,
+			<DUMMY_PIXEL>,
+			<DUMMY_PIXEL>,
+			<DUMMY_PIXEL>,
+			<DUMMY_PIXEL>,
+			<&pixel 0 128>,
+			<&pixel 21 128>,
+			<&pixel 42 128>,
+			<&pixel 63 128>,
+			<&pixel 84 128>,
+			<&pixel 105 128>,
+			<&pixel 126 128>,
+			<DUMMY_PIXEL>,
+			<DUMMY_PIXEL>,
+			<DUMMY_PIXEL>,
+			<DUMMY_PIXEL>,
+			<DUMMY_PIXEL>,
+			<DUMMY_PIXEL>,
+			<DUMMY_PIXEL>,
+			<DUMMY_PIXEL>,
+			<DUMMY_PIXEL>,
+			<&pixel 0 160>,
+			<&pixel 21 160>,
+			<&pixel 42 160>,
+			<&pixel 63 160>,
+			<&pixel 84 160>,
+			<&pixel 105 160>,
+			<&pixel 126 160>,
+			<DUMMY_PIXEL>,
+			<DUMMY_PIXEL>,
+			<DUMMY_PIXEL>,
+			<DUMMY_PIXEL>,
+			<DUMMY_PIXEL>,
+			<DUMMY_PIXEL>,
+			<DUMMY_PIXEL>,
+			<DUMMY_PIXEL>,
+			<DUMMY_PIXEL>,
+			<&pixel 0 192>,
+			<&pixel 21 192>,
+			<&pixel 42 192>,
+			<&pixel 63 192>,
+			<&pixel 84 192>,
+			<&pixel 105 192>,
+			<&pixel 126 192>,
+			<DUMMY_PIXEL>,
+			<DUMMY_PIXEL>,
+			<DUMMY_PIXEL>,
+			<DUMMY_PIXEL>,
+			<DUMMY_PIXEL>,
+			<DUMMY_PIXEL>,
+			<DUMMY_PIXEL>,
+			<DUMMY_PIXEL>,
+			<DUMMY_PIXEL>,
+			<&pixel 0 224>,
+			<&pixel 21 224>,
+			<&pixel 42 224>,
+			<&pixel 63 224>,
+			<&pixel 84 224>,
+			<&pixel 105 224>,
+			<&pixel 126 224>,
+			<DUMMY_PIXEL>,
+			<DUMMY_PIXEL>,
+			<DUMMY_PIXEL>,
+			<DUMMY_PIXEL>,
+			<DUMMY_PIXEL>,
+			<DUMMY_PIXEL>,
+			<DUMMY_PIXEL>,
+			<DUMMY_PIXEL>,
+			<DUMMY_PIXEL>,
+			<&pixel 128 0>,
+			<&pixel 149 0>,
+			<&pixel 170 0>,
+			<&pixel 191 0>,
+			<&pixel 212 0>,
+			<&pixel 233 0>,
+			<&pixel 254 0>,
+			<DUMMY_PIXEL>,
+			<DUMMY_PIXEL>,
+			<DUMMY_PIXEL>,
+			<DUMMY_PIXEL>,
+			<DUMMY_PIXEL>,
+			<DUMMY_PIXEL>,
+			<DUMMY_PIXEL>,
+			<DUMMY_PIXEL>,
+			<DUMMY_PIXEL>,
+			<&pixel 128 32>,
+			<&pixel 149 32>,
+			<&pixel 170 32>,
+			<&pixel 191 32>,
+			<&pixel 212 32>,
+			<&pixel 233 32>,
+			<&pixel 254 32>,
+			<DUMMY_PIXEL>,
+			<DUMMY_PIXEL>,
+			<DUMMY_PIXEL>,
+			<DUMMY_PIXEL>,
+			<DUMMY_PIXEL>,
+			<DUMMY_PIXEL>,
+			<DUMMY_PIXEL>,
+			<DUMMY_PIXEL>,
+			<DUMMY_PIXEL>,
+			<&pixel 128 64>,
+			<&pixel 149 64>,
+			<&pixel 170 64>,
+			<&pixel 191 64>,
+			<&pixel 212 64>,
+			<&pixel 233 64>,
+			<&pixel 254 64>,
+			<DUMMY_PIXEL>,
+			<DUMMY_PIXEL>,
+			<DUMMY_PIXEL>,
+			<DUMMY_PIXEL>,
+			<DUMMY_PIXEL>,
+			<DUMMY_PIXEL>,
+			<DUMMY_PIXEL>,
+			<DUMMY_PIXEL>,
+			<DUMMY_PIXEL>,
+			<&pixel 128 96>,
+			<&pixel 149 96>,
+			<&pixel 170 96>,
+			<&pixel 191 96>,
+			<&pixel 212 96>,
+			<&pixel 233 96>,
+			<&pixel 254 96>,
+			<DUMMY_PIXEL>,
+			<DUMMY_PIXEL>,
+			<DUMMY_PIXEL>,
+			<DUMMY_PIXEL>,
+			<DUMMY_PIXEL>,
+			<DUMMY_PIXEL>,
+			<DUMMY_PIXEL>,
+			<DUMMY_PIXEL>,
+			<DUMMY_PIXEL>,
+			<&pixel 128 128>,
+			<&pixel 149 128>,
+			<&pixel 170 128>,
+			<&pixel 191 128>,
+			<&pixel 212 128>,
+			<&pixel 233 128>,
+			<&pixel 254 128>,
+			<DUMMY_PIXEL>,
+			<DUMMY_PIXEL>,
+			<DUMMY_PIXEL>,
+			<DUMMY_PIXEL>,
+			<DUMMY_PIXEL>,
+			<DUMMY_PIXEL>,
+			<DUMMY_PIXEL>,
+			<DUMMY_PIXEL>,
+			<DUMMY_PIXEL>,
+			<&pixel 128 160>,
+			<&pixel 149 160>,
+			<&pixel 170 160>,
+			<&pixel 191 160>,
+			<&pixel 212 160>,
+			<&pixel 233 160>,
+			<&pixel 254 160>,
+			<DUMMY_PIXEL>,
+			<DUMMY_PIXEL>,
+			<DUMMY_PIXEL>,
+			<DUMMY_PIXEL>,
+			<DUMMY_PIXEL>,
+			<DUMMY_PIXEL>,
+			<DUMMY_PIXEL>,
+			<DUMMY_PIXEL>,
+			<DUMMY_PIXEL>,
+			<&pixel 128 192>,
+			<&pixel 149 192>,
+			<&pixel 170 192>,
+			<&pixel 191 192>,
+			<&pixel 212 192>,
+			<&pixel 233 192>,
+			<&pixel 254 192>,
+			<DUMMY_PIXEL>,
+			<DUMMY_PIXEL>,
+			<DUMMY_PIXEL>,
+			<DUMMY_PIXEL>,
+			<DUMMY_PIXEL>,
+			<DUMMY_PIXEL>,
+			<DUMMY_PIXEL>,
+			<DUMMY_PIXEL>,
+			<DUMMY_PIXEL>,
+			<&pixel 128 224>,
+			<&pixel 149 224>,
+			<&pixel 170 224>,
+			<&pixel 191 224>,
+			<&pixel 212 224>,
+			<&pixel 233 224>,
+			<&pixel 254 224>,
+			<DUMMY_PIXEL>,
+			<DUMMY_PIXEL>,
+			<DUMMY_PIXEL>,
+			<DUMMY_PIXEL>,
+			<DUMMY_PIXEL>,
+			<DUMMY_PIXEL>,
+			<DUMMY_PIXEL>,
+			<DUMMY_PIXEL>,
+			<DUMMY_PIXEL>;
+	};
+
+	root_animation: animation_0 {
+		compatible = "zmk,animation-control";
+		label = "ANIMATION_CTRL_0";
+		animations = <&ripple_effect>;
+	};
+
+	ripple_effect: animation_1 {
+		compatible = "zmk,animation-ripple";
+		status = "okay";
+		pixels = <ZONE_KEYS>;
+		blending-mode = <BLENDING_MODE_NORMAL>;
+		duration = <1000>;
+		color = <HSL(0, 0, 100)>;
+		ripple-width = <50>;
 	};
 };
