@@ -37,6 +37,22 @@
 	pinctrl-names = "default";
 };
 
+&i2c0 {
+	status = "okay";
+	pinctrl-0 = <&i2c0_default>;
+	pinctrl-names = "default";
+	status = "okay";
+	led_ctrl: is31fl3733@50 {
+		reg = <0x50>;
+		compatible = "issi,is31fl3733";
+		sdb-gpios = <&gpiob 18 GPIO_ACTIVE_HIGH>;
+	};
+};
+
+&gpiob {
+	status = "okay";
+};
+
 zephyr_udc0: &usbotg {
 	compatible = "nxp,kinetis-usbd";
 	status = "okay";
