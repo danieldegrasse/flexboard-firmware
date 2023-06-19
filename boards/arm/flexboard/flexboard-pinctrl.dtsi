@@ -1,5 +1,5 @@
 /*
- * Copyright 2022 Daniel DeGrasse <daniel@degrasse.com>
+ * Copyright 2022-2023 Daniel DeGrasse <daniel@degrasse.com>
  * SPDX-License-Identifier: Apache-2.0
  */
 
@@ -12,6 +12,16 @@
 			pinmux = <UART3_RX_PTB10>,
 				<UART3_TX_PTB11>;
 			drive-strength = "low";
+			slew-rate = "fast";
+		};
+	};
+
+	i2c0_default: i2c0_default {
+		group0 {
+			pinmux = <I2C0_SDA_PTB1>,
+				<I2C0_SCL_PTB2>;
+			drive-strength = "low";
+			drive-open-drain;
 			slew-rate = "fast";
 		};
 	};
