@@ -38,6 +38,9 @@ manifest:
       path: modules/hal/cmsis
       groups:
         - hal
+    - name: zcbor
+      revision: 0.6.0
+      path: modules/lib/zcbor
     - name: mcuboot
       revision: f5ad98217043bb8552d0d6b669fead33a54b6c95
       remote: danieldegrasse
@@ -58,7 +61,7 @@ manifest:
       import: false
       west-commands: scripts/west-commands.yml
     - name: zmk
-      revision: c6c9a0114a4a4d7ba5e7bdd105d68cc2121f31e8
+      revision: dev/dynamic-keymaps
       remote: danieldegrasse
       path: apps/zmk
       import: false
