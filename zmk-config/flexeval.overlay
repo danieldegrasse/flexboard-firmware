@@ -21,3 +21,4 @@
 		 	<&gpioe 12 GPIO_ACTIVE_HIGH>;
 	};
 };
+
