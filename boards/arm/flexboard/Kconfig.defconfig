@@ -18,4 +18,12 @@ config MCG_VDIV0
 config MCG_FCRDIV
 	default 0
 
+# Board uses MCUBoot for all application images
+config BOOTLOADER_MCUBOOT
+	default y if !MCUBOOT
+
+# Board uses custom key file
+config MCUBOOT_SIGNATURE_KEY_FILE
+	default "flexboard-boot-key.pem"
+
 endif # BOARD_FLEXBOARD
