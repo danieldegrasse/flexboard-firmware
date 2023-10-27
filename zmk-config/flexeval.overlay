@@ -25,6 +25,7 @@
 	chosen {
 		zmk,kscan = &kscan0;
 		zmk,animation = &root_animation;
+		zmk,watchdog = &wdog;
 	};
 
 	kscan0: kscan {
