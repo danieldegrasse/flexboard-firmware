@@ -1,0 +1,243 @@
+/*
+ * Copyright 2023 Daniel DeGrasse
+ *
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+#include <dt-bindings/zmk/matrix_transform.h>
+
+/* Definitions mapping keys by their schematic name to row/column coordinates */
+#define KEY_1 RC(0,0)
+#define KEY_2 RC(0,1)
+#define KEY_3 RC(0,2)
+#define KEY_4 RC(0,3)
+#define KEY_5 RC(0,4)
+#define KEY_6 RC(0,5)
+#define KEY_7 RC(0,6)
+#define KEY_8 RC(0,7)
+#define KEY_9 RC(0,8)
+#define KEY_10 RC(0,9)
+#define KEY_11 RC(0,10)
+#define KEY_12 RC(0,11)
+#define KEY_13 RC(0,12)
+#define KEY_14 RC(0,13)
+#define KEY_15 RC(0,14)
+#define KEY_16 RC(0,15)
+#define KEY_17 RC(0,16)
+#define KEY_18 RC(0,17)
+#define KEY_19 RC(0,18)
+#define KEY_20 RC(0,19)
+#define KEY_21 RC(1,0)
+#define KEY_22 RC(1,1)
+#define KEY_23 RC(1,2)
+#define KEY_24 RC(1,3)
+#define KEY_25 RC(1,4)
+#define KEY_26 RC(1,5)
+#define KEY_27 RC(1,6)
+#define KEY_28 RC(1,7)
+#define KEY_29 RC(1,8)
+#define KEY_30 RC(1,9)
+#define KEY_31 RC(1,10)
+#define KEY_32 RC(1,11)
+#define KEY_33 RC(1,12)
+#define KEY_34 RC(1,13)
+#define KEY_35 RC(1,14)
+#define KEY_36 RC(1,15)
+#define KEY_37 RC(1,16)
+#define KEY_38 RC(1,17)
+#define KEY_39 RC(1,18)
+#define KEY_40 RC(1,19)
+#define KEY_41 RC(1,20)
+#define KEY_42 RC(1,21)
+#define KEY_43 RC(1,22)
+#define KEY_44 RC(1,23)
+#define KEY_45 RC(2,0)
+#define KEY_46 RC(2,1)
+#define KEY_47 RC(2,2)
+#define KEY_48 RC(2,3)
+#define KEY_49 RC(2,4)
+#define KEY_50 RC(2,5)
+#define KEY_51 RC(2,6)
+#define KEY_52 RC(2,7)
+#define KEY_53 RC(2,8)
+#define KEY_54 RC(2,9)
+#define KEY_55 RC(2,10)
+#define KEY_56 RC(2,11)
+#define KEY_57 RC(2,12)
+#define KEY_58 RC(2,13)
+#define KEY_59 RC(2,14)
+#define KEY_60 RC(2,16)
+#define KEY_61 RC(2,17)
+#define KEY_62 RC(2,18)
+#define KEY_63 RC(2,19)
+#define KEY_64 RC(2,20)
+#define KEY_65 RC(2,21)
+#define KEY_66 RC(2,22)
+#define KEY_67 RC(2,23)
+#define KEY_68 RC(3,0)
+#define KEY_69 RC(3,1)
+#define KEY_70 RC(3,2)
+#define KEY_71 RC(3,3)
+#define KEY_72 RC(3,4)
+#define KEY_73 RC(3,5)
+#define KEY_74 RC(3,6)
+#define KEY_75 RC(3,7)
+#define KEY_76 RC(3,8)
+#define KEY_77 RC(3,9)
+#define KEY_78 RC(3,10)
+#define KEY_79 RC(3,11)
+#define KEY_80 RC(3,12)
+#define KEY_81 RC(3,13)
+#define KEY_82 RC(3,14)
+#define KEY_83 RC(3,16)
+#define KEY_84 RC(3,17)
+#define KEY_85 RC(3,18)
+#define KEY_86 RC(3,19)
+#define KEY_87 RC(3,20)
+#define KEY_88 RC(3,21)
+#define KEY_89 RC(3,22)
+#define KEY_90 RC(3,23)
+#define KEY_91 RC(4,0)
+#define KEY_92 RC(4,1)
+#define KEY_93 RC(4,2)
+#define KEY_94 RC(4,3)
+#define KEY_95 RC(4,4)
+#define KEY_96 RC(4,5)
+#define KEY_97 RC(4,6)
+#define KEY_98 RC(4,7)
+#define KEY_99 RC(4,8)
+#define KEY_100 RC(4,9)
+#define KEY_101 RC(4,10)
+#define KEY_102 RC(4,11)
+#define KEY_103 RC(4,12)
+#define KEY_104 RC(4,13)
+#define KEY_105 RC(4,16)
+#define KEY_106 RC(4,17)
+#define KEY_107 RC(4,18)
+#define KEY_108 RC(4,19)
+#define KEY_109 RC(4,20)
+#define KEY_110 RC(4,21)
+#define KEY_111 RC(4,22)
+#define KEY_112 RC(4,23)
+#define KEY_113 RC(5,0)
+#define KEY_114 RC(5,1)
+#define KEY_115 RC(5,2)
+#define KEY_116 RC(5,3)
+#define KEY_117 RC(5,4)
+#define KEY_118 RC(5,5)
+#define KEY_119 RC(5,6)
+#define KEY_120 RC(5,7)
+#define KEY_121 RC(5,8)
+#define KEY_122 RC(5,9)
+#define KEY_123 RC(5,10)
+#define KEY_124 RC(5,11)
+#define KEY_125 RC(5,12)
+#define KEY_126 RC(5,16)
+#define KEY_127 RC(5,17)
+#define KEY_128 RC(5,18)
+#define KEY_129 RC(5,19)
+#define KEY_130 RC(5,20)
+#define KEY_131 RC(5,21)
+#define KEY_132 RC(5,22)
+#define KEY_133 RC(6,0)
+#define KEY_134 RC(6,1)
+#define KEY_135 RC(6,2)
+#define KEY_136 RC(6,3)
+#define KEY_137 RC(6,4)
+#define KEY_138 RC(6,7)
+#define KEY_139 RC(6,11)
+#define KEY_140 RC(6,12)
+#define KEY_141 RC(6,13)
+#define KEY_142 RC(6,16)
+#define KEY_143 RC(6,17)
+#define KEY_144 RC(6,18)
+#define KEY_145 RC(6,19)
+#define KEY_146 RC(6,20)
+#define KEY_147 RC(6,21)
+#define KEY_148 RC(6,22)
+#define KEY_149 RC(6,23)
+/* The oddballs... */
+#define KEY_150 RC(0,20)
+#define KEY_151 RC(0,21)
+#define KEY_152 RC(0,22)
+#define KEY_153 RC(0,23)
+
+/ {
+	chosen {
+		zmk,kscan = &kscan0;
+		zmk,watchdog = &wdog;
+		zmk,matrix_transform = &flexboard_transform;
+	};
+
+	flexboard_transform: keymap_transform_0 {
+		compatible = "zmk,matrix-transform";
+		columns = <24>;
+		rows = <7>;
+
+		/*
+		 * | K23 |     | K25 | K26 | K27 | K28 |    K30 | K31 | K32 | K33     ...
+		 * | K47 | K48 | K49 | K50 | K51 | K52 | K53 | K54 | K55 | K56 | K57  ...
+		 * |  K70 | K71 | K72 | K73 | K74 | K75 | K76 | K77 | K78 | K79 | K80 ...
+		 * |   K93 | K94 | K95 | K96 | K97 | K98 | K99 | K100| K101| K102     ...
+		 * |    K115| K116| K117| K118| K119| K120| K121| K122| K123| K124    ...
+		 * | K135| K136| K137|                   K138               |K139     ...
+		 *
+		 *
+		 * ...  K34 | K35 | K36 | K37 | K38 | K39 | K40 | K41 | K42 | K43 | K44 |
+		 * ...  K58 | K59 |    K60    | K61 | K62 | K63 | K64 | K65 | K66 | K67 |
+		 * ...   K81 | K82 |    K83   | K84 | K85 | K86 | K87 | K88 | K89 | K90 |
+		 * ... K103 | K104 |   K105   |     |     |     | K109| K110| K111| K112|
+		 * ...  K125|     K126        |     | K128|     | K130| K131| K132| K149|
+		 * ...   K140|  K141     K142 | K143| K144| K145| K146| K147| K148|
+		 */
+		map = <KEY_23 KEY_25 KEY_26 KEY_27 KEY_28 KEY_30 KEY_31 KEY_32 KEY_33
+			KEY_34 KEY_35 KEY_36 KEY_37 KEY_38 KEY_39 KEY_40 KEY_41 KEY_42 KEY_43 KEY_44
+			KEY_47 KEY_48 KEY_49 KEY_50 KEY_51 KEY_52 KEY_53 KEY_54 KEY_55 KEY_56 KEY_57
+			KEY_58 KEY_59 KEY_60 KEY_61 KEY_62 KEY_63 KEY_64 KEY_65 KEY_66 KEY_67
+			KEY_70 KEY_71 KEY_72 KEY_73 KEY_74 KEY_75 KEY_76 KEY_77 KEY_78 KEY_79 KEY_80
+			KEY_81 KEY_82 KEY_83 KEY_84 KEY_85 KEY_86 KEY_87 KEY_88 KEY_89 KEY_90
+			KEY_93 KEY_94 KEY_95 KEY_96 KEY_97 KEY_98 KEY_99 KEY_100 KEY_101 KEY_102
+			KEY_103 KEY_104 KEY_105 KEY_109 KEY_110 KEY_111 KEY_112
+			KEY_115 KEY_116 KEY_117 KEY_118 KEY_119 KEY_120 KEY_121 KEY_122 KEY_123 KEY_124
+			KEY_125 KEY_126 KEY_128 KEY_130 KEY_131 KEY_132 KEY_149
+			KEY_135 KEY_136 KEY_137 KEY_138 KEY_139
+			KEY_140 KEY_141 KEY_142 KEY_143 KEY_144 KEY_145 KEY_146 KEY_147 KEY_148>;
+	};
+
+	kscan0: kscan {
+		compatible = "zmk,kscan-gpio-matrix";
+		label = "KSCAN";
+		diode-direction = "row2col";
+		row-gpios = <&gpioe 5 GPIO_ACTIVE_HIGH>,/* ROW_1 */
+			<&gpioe 6 GPIO_ACTIVE_HIGH>,	/* ROW_2 */
+			<&gpiob 21 GPIO_ACTIVE_HIGH>,	/* ROW_3 */
+			<&gpiob 20 GPIO_ACTIVE_HIGH>,	/* ROW_4 */
+			<&gpiob 6 GPIO_ACTIVE_HIGH>,	/* ROW_5 */
+			<&gpiob 4 GPIO_ACTIVE_HIGH>,	/* ROW_6 */
+			<&gpiob 3 GPIO_ACTIVE_HIGH>;	/* ROW_7 */
+		col-gpios = <&gpioe 0 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,	/* COL_1  */
+			<&gpioe 1 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>, 	/* COL_2  */
+			<&gpiod 15 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>, 	/* COL_3  */
+			<&gpiod 14 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>, 	/* COL_4  */
+			<&gpiod 13 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>, 	/* COL_5  */
+			<&gpioe 2 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>, 	/* COL_6  */
+			<&gpioe 3 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>, 	/* COL_7  */
+			<&gpiod 12 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>, 	/* COL_8  */
+			<&gpiod 11 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>, 	/* COL_9  */
+			<&gpiod 10 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,	/* COL_10 */
+			<&gpiod 9 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,		/* COL_11 */
+			<&gpiod 8 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,		/* COL_12 */
+			<&gpiod 7 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,		/* COL_13 */
+			<&gpiod 6 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,		/* COL_14 */
+			<&gpiod 5 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>, 	/* COL_15 */
+			<&gpioe 4 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,		/* COL_16 */
+			<&gpiod 4 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>, 	/* COL_17 */
+			<&gpioa 14 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>, 	/* COL_18 */
+			<&gpioa 12 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>, 	/* COL_19 */
+			<&gpioa 7 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>, 	/* COL_20 */
+			<&gpioa 6 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>, 	/* COL_21 */
+			<&gpioa 5 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>, 	/* COL_22 */
+			<&gpioe 27 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>, 	/* COL_23 */
+			<&gpioe 26 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>;	/* COL_24 */
+	};
+};
