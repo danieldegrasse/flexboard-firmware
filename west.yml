@@ -39,7 +39,7 @@ manifest:
       groups:
         - hal
     - name: mcuboot
-      revision: f5ad98217043bb8552d0d6b669fead33a54b6c95
+      revision: 9fc844dc7f3f285f0d5c5687f18eb8b60e3bc0ad
       remote: danieldegrasse
       path: bootloader/mcuboot
     - name: lvgl
@@ -58,7 +58,7 @@ manifest:
       import: false
       west-commands: scripts/west-commands.yml
     - name: zmk
-      revision: 691348abff0c46664705c57b03478254670ce58c
+      revision: dcc34eea51142952054c1f243646583d0b5c7281
       remote: danieldegrasse
       path: apps/zmk
       import: false

@@ -1,0 +1,58 @@
+/*
+ * Copyright 2023 Daniel DeGrasse
+ *
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+
+#define DEFAULT 0
+
+/ {
+	keymap {
+		compatible = "zmk,keymap";
+
+		/*
+		 * | K23 |     | K25 | K26 | K27 | K28 |    K30 | K31 | K32 | K33     ...
+		 * | K47 | K48 | K49 | K50 | K51 | K52 | K53 | K54 | K55 | K56 | K57  ...
+		 * |  K70 | K71 | K72 | K73 | K74 | K75 | K76 | K77 | K78 | K79 | K80 ...
+		 * |   K93 | K94 | K95 | K96 | K97 | K98 | K99 | K100| K101| K102     ...
+		 * |    K115| K116| K117| K118| K119| K120| K121| K122| K123| K124    ...
+		 * | K135| K136| K137|                   K138               |K139     ...
+		 *
+		 *
+		 * ...  K34 | K35 | K36 | K37 | K38 | K39 | K40 | K41 | K42 | K43 | K44 |
+		 * ...  K58 | K59 |    K60    | K61 | K62 | K63 | K64 | K65 | K66 | K67 |
+		 * ...   K81 | K82 |    K83   | K84 | K85 | K86 | K87 | K88 | K89 | K90 |
+		 * ... K103 | K104 |   K105   |     |     |     | K109| K110| K111| K112|
+		 * ...  K125|     K126        |     | K128|     | K130| K131| K132| K149|
+		 * ...   K140|  K141     K142 | K143| K144| K145| K146| K147| K148|
+		 */
+
+		/* Default layer */
+		default_layer {
+			bindings = <
+			&kp ESC &kp F1 &kp F2 &kp F3 &kp F4 &kp F5 &kp F6 &kp F7
+			&kp F8 &kp F9 &kp F10 &kp F11 &kp F12 &kp PSCRN &kp SLCK
+			&kp PAUSE_BREAK &kp C_PP &kp C_MUTE &kp C_VOL_DN
+			&kp C_VOL_UP
+			&kp GRAVE &kp N1 &kp N2 &kp N3 &kp N4 &kp N5 &kp N6
+			&kp N7 &kp N8 &kp N9 &kp N0 &kp MINUS &kp EQUAL &kp BSPC
+			&kp INS &kp HOME &kp PG_UP &kp D &kp E &kp F &kp C_PWR
+			&kp TAB &kp Q &kp W &kp E &kp R &kp T &kp Y &kp U &kp I
+			&kp O &kp P &kp LBKT &kp RBKT &kp NUBS &kp DEL &kp END
+			&kp PG_DN &kp A &kp B &kp C &kp KP_N0
+			&kp CAPS &kp A &kp S &kp D &kp F &kp G &kp H &kp J &kp K
+			&kp L &kp SEMI &kp SQT &kp ENTER &kp KP_N7 &kp KP_N8
+			&kp KP_N9 &kp X
+			&kp LSHIFT &kp Z &kp X &kp C &kp V &kp B &kp N &kp M
+			&kp COMMA &kp PERIOD &kp SLASH &kp RSHIFT &kp UP_ARROW
+			&kp KP_N4 &kp KP_N5 &kp KP_N6 &kp KP_ENTER
+			&kp LCTRL &kp LWIN &kp LALT &kp SPACE &kp RALT &kp RWIN
+			&kp C_MENU &kp LCTRL &kp LEFT_ARROW &kp DOWN_ARROW
+			&kp RIGHT_ARROW &kp KP_N1 &kp KP_N2 &kp KP_N3
+			>;
+		};
+	};
+};
