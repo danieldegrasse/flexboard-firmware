@@ -1,0 +1,2031 @@
+Pinlist
+
+Exported from Flexboard.sch at 12/14/2023 9:26 PM
+
+EAGLE Version 9.6.2 Copyright (c) 1988-2020 Autodesk, Inc.
+
+Part          Pad      Pin        Dir      Net
+
+C1            1        1          pas      RESET
+              2        2          pas      GND
+
+C2            1        1          pas      VDD_3V3
+              2        2          pas      GND
+
+C3            1        1          pas      VDD_3V3
+              2        2          pas      GND
+
+C4            1        1          pas      VDD_3V3
+              2        2          pas      GND
+
+C5            1        1          pas      GND
+              2        2          pas      VDD_3V3
+
+C6            1        1          pas      GND
+              2        2          pas      VDD_3V3
+
+C7            1        1          pas      GND
+              2        2          pas      VDD_3V3
+
+C8            1        1          pas      VDD_3V3
+              2        2          pas      GND
+
+C9            1        1          pas      GND
+              2        2          pas      VDD_3V3
+
+C10           1        1          pas      GND
+              2        2          pas      XTAL
+
+C11           1        1          pas      GND
+              2        2          pas      EXTAL
+
+C12           1        1          pas      VOUT_33
+              2        2          pas      GND
+
+C13           1        1          pas      VSYS_5V
+              2        2          pas      GND
+
+C14           1        1          pas      VLDO_33
+              2        2          pas      GND
+
+C15           1        1          pas      NMI
+              2        2          pas      GND
+
+C16           1        1          pas      VDD_3V3
+              2        2          pas      GND
+
+C17           1        1          pas      VLDO_5V
+              2        2          pas      GND
+
+C18           1        1          pas      VLDO_5V
+              2        2          pas      GND
+
+C19           1        1          pas      VLDO_5V
+              2        2          pas      GND
+
+C20           1        1          pas      VLDO_5V
+              2        2          pas      GND
+
+C21           1        1          pas      VLDO_5V
+              2        2          pas      GND
+
+C22           1        1          pas      VLDO_5V
+              2        2          pas      GND
+
+C23           +        +          pas      VLDO_5V
+              -        -          pas      GND
+
+C24           1        1          pas      EXTAL32
+              2        2          pas      GND
+
+C25           1        1          pas      XTAL32
+              2        2          pas      GND
+
+D1            1        A          pas      ROW_1_XFUNC
+              3        C          pas      N$6
+
+D2            1        A          pas      ROW_1_XFUNC
+              3        C          pas      N$7
+
+D3            1        A          pas      ROW_1_QWERTY
+              3        C          pas      N$8
+
+D4            1        A          pas      ROW_1_QWERTY
+              3        C          pas      N$9
+
+D5            1        A          pas      ROW_1_QWERTY
+              3        C          pas      N$11
+
+D6            1        A          pas      ROW_1_QWERTY
+              3        C          pas      N$12
+
+D7            1        A          pas      ROW_1_QWERTY
+              3        C          pas      N$13
+
+D8            1        A          pas      ROW_1_QWERTY
+              3        C          pas      N$15
+
+D9            1        A          pas      ROW_1_QWERTY
+              3        C          pas      N$17
+
+D10           1        A          pas      ROW_1_QWERTY
+              3        C          pas      N$19
+
+D11           1        A          pas      ROW_1_QWERTY
+              3        C          pas      N$21
+
+D12           1        A          pas      ROW_1_QWERTY
+              3        C          pas      N$23
+
+D13           1        A          pas      ROW_1_QWERTY
+              3        C          pas      N$25
+
+D14           1        A          pas      ROW_1_QWERTY
+              3        C          pas      N$27
+
+D15           1        A          pas      ROW_1_QWERTY
+              3        C          pas      N$29
+
+D16           1        A          pas      ROW_1_QWERTY
+              3        C          pas      N$31
+
+D17           1        A          pas      ROW_1_QWERTY
+              3        C          pas      N$33
+
+D18           1        A          pas      ROW_1_QWERTY
+              3        C          pas      N$35
+
+D19           1        A          pas      ROW_1_QWERTY
+              3        C          pas      N$37
+
+D20           1        A          pas      ROW_1_QWERTY
+              3        C          pas      N$39
+
+D21           1        A          pas      ROW_2_XFUNC
+              3        C          pas      N$51
+
+D22           1        A          pas      ROW_2_XFUNC
+              3        C          pas      N$48
+
+D23           1        A          pas      ROW_2_QWERTY
+              3        C          pas      N$41
+
+D24           1        A          pas      ROW_2_QWERTY
+              3        C          pas      N$44
+
+D25           1        A          pas      ROW_2_QWERTY
+              3        C          pas      N$26
+
+D26           1        A          pas      ROW_2_QWERTY
+              3        C          pas      N$49
+
+D27           1        A          pas      ROW_2_QWERTY
+              3        C          pas      N$47
+
+D28           1        A          pas      ROW_2_QWERTY
+              3        C          pas      N$45
+
+D29           1        A          pas      ROW_2_QWERTY
+              3        C          pas      N$43
+
+D30           1        A          pas      ROW_2_QWERTY
+              3        C          pas      N$36
+
+D31           1        A          pas      ROW_2_QWERTY
+              3        C          pas      N$20
+
+D32           1        A          pas      ROW_2_QWERTY
+              3        C          pas      N$42
+
+D33           1        A          pas      ROW_2_QWERTY
+              3        C          pas      N$40
+
+D34           1        A          pas      ROW_2_QWERTY
+              3        C          pas      N$32
+
+D35           1        A          pas      ROW_2_QWERTY
+              3        C          pas      N$30
+
+D36           1        A          pas      ROW_2_QWERTY
+              3        C          pas      N$38
+
+D37           1        A          pas      ROW_2_QWERTY
+              3        C          pas      N$34
+
+D38           1        A          pas      ROW_2_QWERTY
+              3        C          pas      N$28
+
+D39           1        A          pas      ROW_2_QWERTY
+              3        C          pas      N$24
+
+D40           1        A          pas      ROW_2_QWERTY
+              3        C          pas      N$22
+
+D41           1        A          pas      ROW_2_NUM
+              3        C          pas      N$63
+
+D42           1        A          pas      ROW_2_NUM
+              3        C          pas      N$157
+
+D43           1        A          pas      ROW_2_NUM
+              3        C          pas      N$177
+
+D44           1        A          pas      ROW_2_NUM
+              3        C          pas      N$184
+
+D45           1        A          pas      ROW_3_XFUNC
+              3        C          pas      N$62
+
+D46           1        A          pas      ROW_3_XFUNC
+              3        C          pas      N$64
+
+D47           1        A          pas      ROW_3_QWERTY
+              3        C          pas      N$87
+
+D48           1        A          pas      ROW_3_QWERTY
+              3        C          pas      N$83
+
+D49           1        A          pas      ROW_3_QWERTY
+              3        C          pas      N$75
+
+D50           1        A          pas      ROW_3_QWERTY
+              3        C          pas      N$82
+
+D51           1        A          pas      ROW_3_QWERTY
+              3        C          pas      N$77
+
+D52           1        A          pas      ROW_3_QWERTY
+              3        C          pas      N$74
+
+D53           1        A          pas      ROW_3_QWERTY
+              3        C          pas      N$90
+
+D54           1        A          pas      ROW_3_QWERTY
+              3        C          pas      N$88
+
+D55           1        A          pas      ROW_3_QWERTY
+              3        C          pas      N$86
+
+D56           1        A          pas      ROW_3_QWERTY
+              3        C          pas      N$84
+
+D57           1        A          pas      ROW_3_QWERTY
+              3        C          pas      N$81
+
+D58           1        A          pas      ROW_3_QWERTY
+              3        C          pas      N$80
+
+D59           1        A          pas      ROW_3_QWERTY
+              3        C          pas      N$78
+
+D60           1        A          pas      ROW_3_QWERTY
+              3        C          pas      N$76
+
+D61           1        A          pas      ROW_3_QWERTY
+              3        C          pas      N$73
+
+D62           1        A          pas      ROW_3_QWERTY
+              3        C          pas      N$72
+
+D63           1        A          pas      ROW_3_QWERTY
+              3        C          pas      N$71
+
+D64           1        A          pas      ROW_3_NUM
+              3        C          pas      N$70
+
+D65           1        A          pas      ROW_3_NUM
+              3        C          pas      N$69
+
+D66           1        A          pas      ROW_3_NUM
+              3        C          pas      N$67
+
+D67           1        A          pas      ROW_3_NUM
+              3        C          pas      N$66
+
+D68           1        A          pas      ROW_4_XFUNC
+              3        C          pas      N$68
+
+D69           1        A          pas      ROW_4_XFUNC
+              3        C          pas      N$85
+
+D70           1        A          pas      ROW_4_QWERTY
+              3        C          pas      N$94
+
+D71           1        A          pas      ROW_4_QWERTY
+              3        C          pas      N$98
+
+D72           1        A          pas      ROW_4_QWERTY
+              3        C          pas      N$100
+
+D73           1        A          pas      ROW_4_QWERTY
+              3        C          pas      N$102
+
+D74           1        A          pas      ROW_4_QWERTY
+              3        C          pas      N$104
+
+D75           1        A          pas      ROW_4_QWERTY
+              3        C          pas      N$106
+
+D76           1        A          pas      ROW_4_QWERTY
+              3        C          pas      N$108
+
+D77           1        A          pas      ROW_4_QWERTY
+              3        C          pas      N$110
+
+D78           1        A          pas      ROW_4_QWERTY
+              3        C          pas      N$112
+
+D79           1        A          pas      ROW_4_QWERTY
+              3        C          pas      N$114
+
+D80           1        A          pas      ROW_4_QWERTY
+              3        C          pas      N$116
+
+D81           1        A          pas      ROW_4_QWERTY
+              3        C          pas      N$118
+
+D82           1        A          pas      ROW_4_QWERTY
+              3        C          pas      N$120
+
+D83           1        A          pas      ROW_4_QWERTY
+              3        C          pas      N$96
+
+D84           1        A          pas      ROW_4_QWERTY
+              3        C          pas      N$101
+
+D85           1        A          pas      ROW_4_QWERTY
+              3        C          pas      N$105
+
+D86           1        A          pas      ROW_4_QWERTY
+              3        C          pas      N$97
+
+D87           1        A          pas      ROW_4_NUM
+              3        C          pas      N$93
+
+D88           1        A          pas      ROW_4_NUM
+              3        C          pas      N$95
+
+D89           1        A          pas      ROW_4_NUM
+              3        C          pas      N$92
+
+D90           1        A          pas      ROW_4_NUM
+              3        C          pas      N$89
+
+D91           1        A          pas      ROW_5_XFUNC
+              3        C          pas      N$140
+
+D92           1        A          pas      ROW_5_XFUNC
+              3        C          pas      N$139
+
+D93           1        A          pas      ROW_5_QWERTY
+              3        C          pas      N$137
+
+D94           1        A          pas      ROW_5_QWERTY
+              3        C          pas      N$135
+
+D95           1        A          pas      ROW_5_QWERTY
+              3        C          pas      N$128
+
+D96           1        A          pas      ROW_5_QWERTY
+              3        C          pas      N$113
+
+D97           1        A          pas      ROW_5_QWERTY
+              3        C          pas      N$131
+
+D98           1        A          pas      ROW_5_QWERTY
+              3        C          pas      N$130
+
+D99           1        A          pas      ROW_5_QWERTY
+              3        C          pas      N$125
+
+D100          1        A          pas      ROW_5_QWERTY
+              3        C          pas      N$121
+
+D101          1        A          pas      ROW_5_QWERTY
+              3        C          pas      N$133
+
+D102          1        A          pas      ROW_5_QWERTY
+              3        C          pas      N$132
+
+D103          1        A          pas      ROW_5_QWERTY
+              3        C          pas      N$129
+
+D104          1        A          pas      ROW_5_QWERTY
+              3        C          pas      N$127
+
+D105          1        A          pas      ROW_5_QWERTY
+              3        C          pas      N$126
+
+D106          1        A          pas      ROW_5_QWERTY
+              3        C          pas      N$123
+
+D107          1        A          pas      ROW_5_QWERTY
+              3        C          pas      N$122
+
+D108          1        A          pas      ROW_5_QWERTY
+              3        C          pas      N$119
+
+D109          1        A          pas      ROW_5_NUM
+              3        C          pas      N$115
+
+D110          1        A          pas      ROW_5_NUM
+              3        C          pas      N$111
+
+D111          1        A          pas      ROW_5_NUM
+              3        C          pas      N$109
+
+D112          1        A          pas      ROW_5_NUM
+              3        C          pas      N$107
+
+D113          1        A          pas      ROW_6_XFUNC
+              3        C          pas      N$117
+
+D114          1        A          pas      ROW_6_XFUNC
+              3        C          pas      N$134
+
+D115          1        A          pas      ROW_6_QWERTY
+              3        C          pas      N$167
+
+D116          1        A          pas      ROW_6_QWERTY
+              3        C          pas      N$164
+
+D117          1        A          pas      ROW_6_QWERTY
+              3        C          pas      N$162
+
+D118          1        A          pas      ROW_6_QWERTY
+              3        C          pas      N$160
+
+D119          1        A          pas      ROW_6_QWERTY
+              3        C          pas      N$158
+
+D120          1        A          pas      ROW_6_QWERTY
+              3        C          pas      N$156
+
+D121          1        A          pas      ROW_6_QWERTY
+              3        C          pas      N$154
+
+D122          1        A          pas      ROW_6_QWERTY
+              3        C          pas      N$152
+
+D123          1        A          pas      ROW_6_QWERTY
+              3        C          pas      N$150
+
+D124          1        A          pas      ROW_6_QWERTY
+              3        C          pas      N$145
+
+D125          1        A          pas      ROW_6_QWERTY
+              3        C          pas      N$147
+
+D126          1        A          pas      ROW_6_QWERTY
+              3        C          pas      N$148
+
+D127          1        A          pas      ROW_6_QWERTY
+              3        C          pas      N$146
+
+D128          1        A          pas      ROW_6_QWERTY
+              3        C          pas      N$144
+
+D129          1        A          pas      ROW_6_QWERTY
+              3        C          pas      N$142
+
+D130          1        A          pas      ROW_6_NUM
+              3        C          pas      N$143
+
+D131          1        A          pas      ROW_6_NUM
+              3        C          pas      N$141
+
+D132          1        A          pas      ROW_6_NUM
+              3        C          pas      N$136
+
+D133          1        A          pas      ROW_7_XFUNC
+              3        C          pas      N$149
+
+D134          1        A          pas      ROW_7_XFUNC
+              3        C          pas      N$153
+
+D135          1        A          pas      ROW_7_QWERTY
+              3        C          pas      N$169
+
+D136          1        A          pas      ROW_7_QWERTY
+              3        C          pas      N$183
+
+D137          1        A          pas      ROW_7_QWERTY
+              3        C          pas      N$180
+
+D138          1        A          pas      ROW_7_QWERTY
+              3        C          pas      N$178
+
+D139          1        A          pas      ROW_7_QWERTY
+              3        C          pas      N$176
+
+D140          1        A          pas      ROW_7_QWERTY
+              3        C          pas      N$174
+
+D141          1        A          pas      ROW_7_QWERTY
+              3        C          pas      N$172
+
+D142          1        A          pas      ROW_7_QWERTY
+              3        C          pas      N$171
+
+D143          1        A          pas      ROW_7_QWERTY
+              3        C          pas      N$168
+
+D144          1        A          pas      ROW_7_QWERTY
+              3        C          pas      N$163
+
+D145          1        A          pas      ROW_7_QWERTY
+              3        C          pas      N$166
+
+D146          1        A          pas      ROW_7_NUM
+              3        C          pas      N$159
+
+D147          1        A          pas      ROW_7_NUM
+              3        C          pas      N$165
+
+D148          1        A          pas      ROW_7_NUM
+              3        C          pas      N$161
+
+D149          1        A          pas      ROW_7_NUM
+              3        C          pas      N$155
+
+D150          1        A          pas      ROW_1_NUM
+              3        C          pas      N$91
+
+D151          1        A          pas      ROW_1_NUM
+              3        C          pas      N$99
+
+D152          1        A          pas      ROW_1_NUM
+              3        C          pas      N$124
+
+D153          1        A          pas      ROW_1_NUM
+              3        C          pas      N$138
+
+D154          1        ANODE      io       VSYS_5V
+              2        CATHODE    io       VLDO_5V
+
+GND1          TP       TP         in       GND
+
+GND2          TP       TP         in       GND
+
+GND3          TP       TP         in       GND
+
+GND4          TP       TP         in       GND
+
+H1            HOLE     HOLE       io       GND
+
+H2            HOLE     HOLE       io       GND
+
+H3            HOLE     HOLE       io       GND
+
+H4            HOLE     HOLE       io       GND
+
+H5            HOLE     HOLE       io       GND
+
+H6            HOLE     HOLE       io       GND
+
+H7            HOLE     HOLE       io       GND
+
+H8            HOLE     HOLE       io       GND
+
+H9            HOLE     HOLE       io       GND
+
+J1            A5       CC1        io       N$215
+              A6       DP1        io       USB_P
+              A7       DN1        io       USB_N
+              A8       SBU1       io                *** unconnected ***
+              B5       CC2        io       N$214
+              B6       DP2        io       USB_P
+              B7       DN2        io       USB_N
+              B8       SBU2       io                *** unconnected ***
+              S1       SHELL_GND  pwr      N$1
+              S2       SHELL_GND  pwr      N$1
+              S3       SHELL_GND  pwr      N$1
+              S4       SHELL_GND  pwr      N$1
+              A4_B9    VBUS       pwr      VBUS
+              B4_A9    VBUS       pwr      VBUS
+              A1_B12   GND        pwr      GND
+              B1_A12   GND        pwr      GND
+
+J2            1        VCC        io       VDD_3V3
+              2        TMS        io       JTAG_TMS/SWD_DIO
+              3        GND        io       GND
+              4        TCK        io       JTAG_TCLK/SWD_CLK
+              5        GND2       io       GND
+              6        TDO        io       JTAG_TDO/TRACE_SWO
+              7        KEY        io                *** unconnected ***
+              8        TDI        io       JTAG_TDI
+              9        GNDDETECT  io                *** unconnected ***
+              10       NRESET     io       RESET
+
+J3            1        P$1        io       VDD_3V3
+              2        P$2        io       GND
+              3        P$3        io       UART2_TX
+              4        P$4        io       UART2_RX
+              5        P$5        io       I2C1_SDA
+              6        P$6        io       I2C1_SCL
+              7        P$7        io       FTM3_CH4
+              8        P$8        io       SPI0_SIN
+              9        P$9        io       SPI0_SOUT
+              10       P$10       io       SPI0_SCK
+
+KEY_1         SW1      SW1        io       COL_1_XFUNC_MACRO
+              SW2      SW2        io       N$6
+              LED+     LED+       io       LED_SOURCE_1_XFUNC
+              LED-     LED-       io       LED_SINK_1_XFUNC_MACRO
+
+KEY_2         SW1      SW1        io       COL_2_XFUNC_MACRO
+              SW2      SW2        io       N$7
+              LED+     LED+       io       LED_SOURCE_2_XFUNC
+              LED-     LED-       io       LED_SINK_1_XFUNC_MACRO
+
+KEY_3         SW1      SW1        io       COL_3_MACRO
+              SW2      SW2        io       N$8
+              LED+     LED+       io       LED_SOURCE_1_QWERTY
+              LED-     LED-       io       LED_SINK_2_MACRO
+
+KEY_4         SW1      SW1        io       COL_4_MACRO
+              SW2      SW2        io       N$9
+              LED+     LED+       io       LED_SOURCE_2_QWERY
+              LED-     LED-       io       LED_SINK_2_MACRO
+
+KEY_5         SW1      SW1        io       COL_5_MACRO
+              SW2      SW2        io       N$11
+              LED+     LED+       io       LED_SOURCE_1_QWERTY
+              LED-     LED-       io       LED_SINK_3_MACRO
+
+KEY_6         SW1      SW1        io       COL_6_MACRO
+              SW2      SW2        io       N$12
+              LED+     LED+       io       LED_SOURCE_2_QWERY
+              LED-     LED-       io       LED_SINK_3_MACRO
+
+KEY_7         SW1      SW1        io       COL_7_MACRO
+              SW2      SW2        io       N$13
+              LED+     LED+       io       LED_SOURCE_1_QWERTY
+              LED-     LED-       io       LED_SINK_4_MACRO
+
+KEY_8         SW1      SW1        io       COL_8_MACRO
+              SW2      SW2        io       N$15
+              LED+     LED+       io       LED_SOURCE_2_QWERY
+              LED-     LED-       io       LED_SINK_4_MACRO
+
+KEY_9         SW1      SW1        io       COL_9_MACRO
+              SW2      SW2        io       N$17
+              LED+     LED+       io       LED_SOURCE_1_QWERTY
+              LED-     LED-       io       LED_SINK_5_MACRO
+
+KEY_10        SW1      SW1        io       COL_10_MACRO
+              SW2      SW2        io       N$19
+              LED+     LED+       io       LED_SOURCE_2_QWERY
+              LED-     LED-       io       LED_SINK_5_MACRO
+
+KEY_11        SW1      SW1        io       COL_11_MACRO
+              SW2      SW2        io       N$21
+              LED+     LED+       io       LED_SOURCE_1_QWERTY
+              LED-     LED-       io       LED_SINK_6_MACRO
+
+KEY_12        SW1      SW1        io       COL_12_MACRO
+              SW2      SW2        io       N$23
+              LED+     LED+       io       LED_SOURCE_2_QWERY
+              LED-     LED-       io       LED_SINK_6_MACRO
+
+KEY_13        SW1      SW1        io       COL_13_MACRO
+              SW2      SW2        io       N$25
+              LED+     LED+       io       LED_SOURCE_1_QWERTY
+              LED-     LED-       io       LED_SINK_7_MACRO
+
+KEY_14        SW1      SW1        io       COL_14_MACRO
+              SW2      SW2        io       N$27
+              LED+     LED+       io       LED_SOURCE_2_QWERY
+              LED-     LED-       io       LED_SINK_7_MACRO
+
+KEY_15        SW1      SW1        io       COL_15_MACRO
+              SW2      SW2        io       N$29
+              LED+     LED+       io       LED_SOURCE_1_QWERTY
+              LED-     LED-       io       LED_SINK_8_MACRO
+
+KEY_16        SW1      SW1        io       COL_16_MACRO
+              SW2      SW2        io       N$31
+              LED+     LED+       io       LED_SOURCE_2_QWERY
+              LED-     LED-       io       LED_SINK_8_MACRO
+
+KEY_17        SW1      SW1        io       COL_17_MACRO
+              SW2      SW2        io       N$33
+              LED+     LED+       io       LED_SOURCE_1_QWERTY
+              LED-     LED-       io       LED_SINK_9_MACRO
+
+KEY_18        SW1      SW1        io       COL_18_MACRO
+              SW2      SW2        io       N$35
+              LED+     LED+       io       LED_SOURCE_2_QWERY
+              LED-     LED-       io       LED_SINK_9_MACRO
+
+KEY_19        SW1      SW1        io       COL_19_MACRO
+              SW2      SW2        io       N$37
+              LED+     LED+       io       LED_SOURCE_1_QWERTY
+              LED-     LED-       io       LED_SINK_10_MACRO
+
+KEY_20        SW1      SW1        io       COL_20_MACRO
+              SW2      SW2        io       N$39
+              LED+     LED+       io       LED_SOURCE_2_QWERY
+              LED-     LED-       io       LED_SINK_10_MACRO
+
+KEY_21        SW1      SW1        io       COL_1_XFUNC
+              SW2      SW2        io       N$51
+              LED+     LED+       io       LED_SOURCE_3_XFUNC
+              LED-     LED-       io       LED_SINK_1_XFUNC
+
+KEY_22        SW1      SW1        io       COL_2_XFUNC
+              SW2      SW2        io       N$48
+              LED+     LED+       io       LED_SOURCE_4_XFUNC
+              LED-     LED-       io       LED_SINK_1_XFUNC
+
+KEY_23        SW1      SW1        io       COL_3
+              SW2      SW2        io       N$41
+              LED+     LED+       io       LED_SOURCE_3_QWERTY
+              LED-     LED-       io       LED_SINK_2
+
+KEY_24        SW1      SW1        io       COL_4
+              SW2      SW2        io       N$44
+              LED+     LED+       io       LED_SOURCE_4_QWERTY
+              LED-     LED-       io       LED_SINK_2
+
+KEY_25        SW1      SW1        io       COL_5
+              SW2      SW2        io       N$26
+              LED+     LED+       io       LED_SOURCE_3_QWERTY
+              LED-     LED-       io       LED_SINK_3
+
+KEY_26        SW1      SW1        io       COL_6
+              SW2      SW2        io       N$49
+              LED+     LED+       io       LED_SOURCE_4_QWERTY
+              LED-     LED-       io       LED_SINK_3
+
+KEY_27        SW1      SW1        io       COL_7
+              SW2      SW2        io       N$47
+              LED+     LED+       io       LED_SOURCE_3_QWERTY
+              LED-     LED-       io       LED_SINK_4
+
+KEY_28        SW1      SW1        io       COL_8
+              SW2      SW2        io       N$45
+              LED+     LED+       io       LED_SOURCE_4_QWERTY
+              LED-     LED-       io       LED_SINK_4
+
+KEY_29        SW1      SW1        io       COL_9
+              SW2      SW2        io       N$43
+              LED+     LED+       io       LED_SOURCE_3_QWERTY
+              LED-     LED-       io       LED_SINK_5
+
+KEY_30        SW1      SW1        io       COL_10
+              SW2      SW2        io       N$36
+              LED+     LED+       io       LED_SOURCE_4_QWERTY
+              LED-     LED-       io       LED_SINK_5
+
+KEY_30_OFFSET SW1      SW1        io       COL_10
+              SW2      SW2        io       N$36
+              LED+     LED+       io       LED_SOURCE_4_QWERTY
+              LED-     LED-       io       LED_SINK_5
+
+KEY_31        SW1      SW1        io       COL_11
+              SW2      SW2        io       N$20
+              LED+     LED+       io       LED_SOURCE_3_QWERTY
+              LED-     LED-       io       LED_SINK_6
+
+KEY_31_OFFSET SW1      SW1        io       COL_11
+              SW2      SW2        io       N$20
+              LED+     LED+       io       LED_SOURCE_3_QWERTY
+              LED-     LED-       io       LED_SINK_6
+
+KEY_32        SW1      SW1        io       COL_12
+              SW2      SW2        io       N$42
+              LED+     LED+       io       LED_SOURCE_4_QWERTY
+              LED-     LED-       io       LED_SINK_6
+
+KEY_32_OFFSET SW1      SW1        io       COL_12
+              SW2      SW2        io       N$42
+              LED+     LED+       io       LED_SOURCE_4_QWERTY
+              LED-     LED-       io       LED_SINK_6
+
+KEY_33        SW1      SW1        io       COL_13
+              SW2      SW2        io       N$40
+              LED+     LED+       io       LED_SOURCE_3_QWERTY
+              LED-     LED-       io       LED_SINK_7
+
+KEY_33_OFFSET SW1      SW1        io       COL_13
+              SW2      SW2        io       N$40
+              LED+     LED+       io       LED_SOURCE_3_QWERTY
+              LED-     LED-       io       LED_SINK_7
+
+KEY_34        SW1      SW1        io       COL_14
+              SW2      SW2        io       N$32
+              LED+     LED+       io       LED_SOURCE_4_QWERTY
+              LED-     LED-       io       LED_SINK_7
+
+KEY_35        SW1      SW1        io       COL_15
+              SW2      SW2        io       N$30
+              LED+     LED+       io       LED_SOURCE_3_QWERTY
+              LED-     LED-       io       LED_SINK_8
+
+KEY_36        SW1      SW1        io       COL_16
+              SW2      SW2        io       N$38
+              LED+     LED+       io       LED_SOURCE_4_QWERTY
+              LED-     LED-       io       LED_SINK_8
+
+KEY_37        SW1      SW1        io       COL_17
+              SW2      SW2        io       N$34
+              LED+     LED+       io       LED_SOURCE_3_QWERTY
+              LED-     LED-       io       LED_SINK_9
+
+KEY_38        SW1      SW1        io       COL_18
+              SW2      SW2        io       N$28
+              LED+     LED+       io       LED_SOURCE_4_QWERTY
+              LED-     LED-       io       LED_SINK_9
+
+KEY_39        SW1      SW1        io       COL_19
+              SW2      SW2        io       N$24
+              LED+     LED+       io       LED_SOURCE_3_QWERTY
+              LED-     LED-       io       LED_SINK_10
+
+KEY_40        SW1      SW1        io       COL_20
+              SW2      SW2        io       N$22
+              LED+     LED+       io       LED_SOURCE_4_QWERTY
+              LED-     LED-       io       LED_SINK_10
+
+KEY_41        SW1      SW1        io       COL_21
+              SW2      SW2        io       N$63
+              LED+     LED+       io       LED_SOURCE_3_NUM
+              LED-     LED-       io       LED_SINK_11
+
+KEY_42        SW1      SW1        io       COL_22
+              SW2      SW2        io       N$157
+              LED+     LED+       io       LED_SOURCE_4_NUM
+              LED-     LED-       io       LED_SINK_11
+
+KEY_43        SW1      SW1        io       COL_23
+              SW2      SW2        io       N$177
+              LED+     LED+       io       LED_SOURCE_3_NUM
+              LED-     LED-       io       LED_SINK_12
+
+KEY_44        SW1      SW1        io       COL_24
+              SW2      SW2        io       N$184
+              LED+     LED+       io       LED_SOURCE_4_NUM
+              LED-     LED-       io       LED_SINK_12
+
+KEY_45        SW1      SW1        io       COL_1_XFUNC
+              SW2      SW2        io       N$62
+              LED+     LED+       io       LED_SOURCE_5_XFUNC
+              LED-     LED-       io       LED_SINK_1_XFUNC
+
+KEY_46        SW1      SW1        io       COL_2_XFUNC
+              SW2      SW2        io       N$64
+              LED+     LED+       io       LED_SOURCE_6_XFUNC
+              LED-     LED-       io       LED_SINK_1_XFUNC
+
+KEY_47        SW1      SW1        io       COL_3
+              SW2      SW2        io       N$87
+              LED+     LED+       io       LED_SOURCE_5_QWERTY
+              LED-     LED-       io       LED_SINK_2
+
+KEY_48        SW1      SW1        io       COL_4
+              SW2      SW2        io       N$83
+              LED+     LED+       io       LED_SOURCE_6_QWERTY
+              LED-     LED-       io       LED_SINK_2
+
+KEY_49        SW1      SW1        io       COL_5
+              SW2      SW2        io       N$75
+              LED+     LED+       io       LED_SOURCE_5_QWERTY
+              LED-     LED-       io       LED_SINK_3
+
+KEY_50        SW1      SW1        io       COL_6
+              SW2      SW2        io       N$82
+              LED+     LED+       io       LED_SOURCE_6_QWERTY
+              LED-     LED-       io       LED_SINK_3
+
+KEY_51        SW1      SW1        io       COL_7
+              SW2      SW2        io       N$77
+              LED+     LED+       io       LED_SOURCE_5_QWERTY
+              LED-     LED-       io       LED_SINK_4
+
+KEY_52        SW1      SW1        io       COL_8
+              SW2      SW2        io       N$74
+              LED+     LED+       io       LED_SOURCE_6_QWERTY
+              LED-     LED-       io       LED_SINK_4
+
+KEY_53        SW1      SW1        io       COL_9
+              SW2      SW2        io       N$90
+              LED+     LED+       io       LED_SOURCE_5_QWERTY
+              LED-     LED-       io       LED_SINK_5
+
+KEY_54        SW1      SW1        io       COL_10
+              SW2      SW2        io       N$88
+              LED+     LED+       io       LED_SOURCE_6_QWERTY
+              LED-     LED-       io       LED_SINK_5
+
+KEY_55        SW1      SW1        io       COL_11
+              SW2      SW2        io       N$86
+              LED+     LED+       io       LED_SOURCE_5_QWERTY
+              LED-     LED-       io       LED_SINK_6
+
+KEY_56        SW1      SW1        io       COL_12
+              SW2      SW2        io       N$84
+              LED+     LED+       io       LED_SOURCE_6_QWERTY
+              LED-     LED-       io       LED_SINK_6
+
+KEY_57        SW1      SW1        io       COL_13
+              SW2      SW2        io       N$81
+              LED+     LED+       io       LED_SOURCE_5_QWERTY
+              LED-     LED-       io       LED_SINK_7
+
+KEY_58        SW1      SW1        io       COL_14
+              SW2      SW2        io       N$80
+              LED+     LED+       io       LED_SOURCE_6_QWERTY
+              LED-     LED-       io       LED_SINK_7
+
+KEY_59        SW1      SW1        io       COL_15
+              SW2      SW2        io       N$78
+              LED+     LED+       io       LED_SOURCE_5_QWERTY
+              LED-     LED-       io       LED_SINK_8
+
+KEY_60        SW1      SW1        io       COL_17
+              SW2      SW2        io       N$76
+              LED+     LED+       io       LED_SOURCE_5_QWERTY
+              LED-     LED-       io       LED_SINK_9
+
+KEY_61        SW1      SW1        io       COL_18
+              SW2      SW2        io       N$73
+              LED+     LED+       io       LED_SOURCE_6_QWERTY
+              LED-     LED-       io       LED_SINK_9
+
+KEY_62        SW1      SW1        io       COL_19
+              SW2      SW2        io       N$72
+              LED+     LED+       io       LED_SOURCE_5_QWERTY
+              LED-     LED-       io       LED_SINK_10
+
+KEY_63        SW1      SW1        io       COL_20
+              SW2      SW2        io       N$71
+              LED+     LED+       io       LED_SOURCE_6_QWERTY
+              LED-     LED-       io       LED_SINK_10
+
+KEY_64        SW1      SW1        io       COL_21
+              SW2      SW2        io       N$70
+              LED+     LED+       io       LED_SOURCE_5_NUM
+              LED-     LED-       io       LED_SINK_11
+
+KEY_65        SW1      SW1        io       COL_22
+              SW2      SW2        io       N$69
+              LED+     LED+       io       LED_SOURCE_6_NUM
+              LED-     LED-       io       LED_SINK_11
+
+KEY_66        SW1      SW1        io       COL_23
+              SW2      SW2        io       N$67
+              LED+     LED+       io       LED_SOURCE_5_NUM
+              LED-     LED-       io       LED_SINK_12
+
+KEY_67        SW1      SW1        io       COL_24
+              SW2      SW2        io       N$66
+              LED+     LED+       io       LED_SOURCE_6_NUM
+              LED-     LED-       io       LED_SINK_12
+
+KEY_68        SW1      SW1        io       COL_1_XFUNC
+              SW2      SW2        io       N$68
+              LED+     LED+       io       LED_SOURCE_7_XFUNC
+              LED-     LED-       io       LED_SINK_1_XFUNC
+
+KEY_69        SW1      SW1        io       COL_2_XFUNC
+              SW2      SW2        io       N$85
+              LED+     LED+       io       LED_SOURCE_8_XFUNC
+              LED-     LED-       io       LED_SINK_1_XFUNC
+
+KEY_70        SW1      SW1        io       COL_3
+              SW2      SW2        io       N$94
+              LED+     LED+       io       LED_SOURCE_7_QWERTY
+              LED-     LED-       io       LED_SINK_2
+
+KEY_71        SW1      SW1        io       COL_4
+              SW2      SW2        io       N$98
+              LED+     LED+       io       LED_SOURCE_8_QWERTY
+              LED-     LED-       io       LED_SINK_2
+
+KEY_72        SW1      SW1        io       COL_5
+              SW2      SW2        io       N$100
+              LED+     LED+       io       LED_SOURCE_7_QWERTY
+              LED-     LED-       io       LED_SINK_3
+
+KEY_73        SW1      SW1        io       COL_6
+              SW2      SW2        io       N$102
+              LED+     LED+       io       LED_SOURCE_8_QWERTY
+              LED-     LED-       io       LED_SINK_3
+
+KEY_74        SW1      SW1        io       COL_7
+              SW2      SW2        io       N$104
+              LED+     LED+       io       LED_SOURCE_7_QWERTY
+              LED-     LED-       io       LED_SINK_4
+
+KEY_75        SW1      SW1        io       COL_8
+              SW2      SW2        io       N$106
+              LED+     LED+       io       LED_SOURCE_8_QWERTY
+              LED-     LED-       io       LED_SINK_4
+
+KEY_76        SW1      SW1        io       COL_9
+              SW2      SW2        io       N$108
+              LED+     LED+       io       LED_SOURCE_7_QWERTY
+              LED-     LED-       io       LED_SINK_5
+
+KEY_77        SW1      SW1        io       COL_10
+              SW2      SW2        io       N$110
+              LED+     LED+       io       LED_SOURCE_8_QWERTY
+              LED-     LED-       io       LED_SINK_5
+
+KEY_78        SW1      SW1        io       COL_11
+              SW2      SW2        io       N$112
+              LED+     LED+       io       LED_SOURCE_7_QWERTY
+              LED-     LED-       io       LED_SINK_6
+
+KEY_79        SW1      SW1        io       COL_12
+              SW2      SW2        io       N$114
+              LED+     LED+       io       LED_SOURCE_8_QWERTY
+              LED-     LED-       io       LED_SINK_6
+
+KEY_80        SW1      SW1        io       COL_13
+              SW2      SW2        io       N$116
+              LED+     LED+       io       LED_SOURCE_7_QWERTY
+              LED-     LED-       io       LED_SINK_7
+
+KEY_81        SW1      SW1        io       COL_14
+              SW2      SW2        io       N$118
+              LED+     LED+       io       LED_SOURCE_8_QWERTY
+              LED-     LED-       io       LED_SINK_7
+
+KEY_82        SW1      SW1        io       COL_15
+              SW2      SW2        io       N$120
+              LED+     LED+       io       LED_SOURCE_7_QWERTY
+              LED-     LED-       io       LED_SINK_8
+
+KEY_83        SW1      SW1        io       COL_17
+              SW2      SW2        io       N$96
+              LED+     LED+       io       LED_SOURCE_7_QWERTY
+              LED-     LED-       io       LED_SINK_9
+
+KEY_84        SW1      SW1        io       COL_18
+              SW2      SW2        io       N$101
+              LED+     LED+       io       LED_SOURCE_8_QWERTY
+              LED-     LED-       io       LED_SINK_9
+
+KEY_85        SW1      SW1        io       COL_19
+              SW2      SW2        io       N$105
+              LED+     LED+       io       LED_SOURCE_7_QWERTY
+              LED-     LED-       io       LED_SINK_10
+
+KEY_86        SW1      SW1        io       COL_20
+              SW2      SW2        io       N$97
+              LED+     LED+       io       LED_SOURCE_8_QWERTY
+              LED-     LED-       io       LED_SINK_10
+
+KEY_87        SW1      SW1        io       COL_21
+              SW2      SW2        io       N$93
+              LED+     LED+       io       LED_SOURCE_7_NUM
+              LED-     LED-       io       LED_SINK_11
+
+KEY_88        SW1      SW1        io       COL_22
+              SW2      SW2        io       N$95
+              LED+     LED+       io       LED_SOURCE_8_NUM
+              LED-     LED-       io       LED_SINK_11
+
+KEY_89        SW1      SW1        io       COL_23
+              SW2      SW2        io       N$92
+              LED+     LED+       io       LED_SOURCE_7_NUM
+              LED-     LED-       io       LED_SINK_12
+
+KEY_90        SW1      SW1        io       COL_24
+              SW2      SW2        io       N$89
+              LED+     LED+       io       LED_SOURCE_8_NUM
+              LED-     LED-       io       LED_SINK_12
+
+KEY_91        SW1      SW1        io       COL_1_XFUNC
+              SW2      SW2        io       N$140
+              LED+     LED+       io       LED_SOURCE_9_XFUNC
+              LED-     LED-       io       LED_SINK_1_XFUNC
+
+KEY_92        SW1      SW1        io       COL_2_XFUNC
+              SW2      SW2        io       N$139
+              LED+     LED+       io       LED_SORUCE_10_XFUNC
+              LED-     LED-       io       LED_SINK_1_XFUNC
+
+KEY_93        SW1      SW1        io       COL_3
+              SW2      SW2        io       N$137
+              LED+     LED+       io       LED_SOURCE_9_QWERTY
+              LED-     LED-       io       LED_SINK_2
+
+KEY_94        SW1      SW1        io       COL_4
+              SW2      SW2        io       N$135
+              LED+     LED+       io       LED_SOURCE_10_QWERTY
+              LED-     LED-       io       LED_SINK_2
+
+KEY_95        SW1      SW1        io       COL_5
+              SW2      SW2        io       N$128
+              LED+     LED+       io       LED_SOURCE_9_QWERTY
+              LED-     LED-       io       LED_SINK_3
+
+KEY_96        SW1      SW1        io       COL_6
+              SW2      SW2        io       N$113
+              LED+     LED+       io       LED_SOURCE_10_QWERTY
+              LED-     LED-       io       LED_SINK_3
+
+KEY_97        SW1      SW1        io       COL_7
+              SW2      SW2        io       N$131
+              LED+     LED+       io       LED_SOURCE_9_QWERTY
+              LED-     LED-       io       LED_SINK_4
+
+KEY_98        SW1      SW1        io       COL_8
+              SW2      SW2        io       N$130
+              LED+     LED+       io       LED_SOURCE_10_QWERTY
+              LED-     LED-       io       LED_SINK_4
+
+KEY_99        SW1      SW1        io       COL_9
+              SW2      SW2        io       N$125
+              LED+     LED+       io       LED_SOURCE_9_QWERTY
+              LED-     LED-       io       LED_SINK_5
+
+KEY_100       SW1      SW1        io       COL_10
+              SW2      SW2        io       N$121
+              LED+     LED+       io       LED_SOURCE_10_QWERTY
+              LED-     LED-       io       LED_SINK_5
+
+KEY_101       SW1      SW1        io       COL_11
+              SW2      SW2        io       N$133
+              LED+     LED+       io       LED_SOURCE_9_QWERTY
+              LED-     LED-       io       LED_SINK_6
+
+KEY_102       SW1      SW1        io       COL_12
+              SW2      SW2        io       N$132
+              LED+     LED+       io       LED_SOURCE_10_QWERTY
+              LED-     LED-       io       LED_SINK_6
+
+KEY_103       SW1      SW1        io       COL_13
+              SW2      SW2        io       N$129
+              LED+     LED+       io       LED_SOURCE_9_QWERTY
+              LED-     LED-       io       LED_SINK_7
+
+KEY_104       SW1      SW1        io       COL_14
+              SW2      SW2        io       N$127
+              LED+     LED+       io       LED_SOURCE_10_QWERTY
+              LED-     LED-       io       LED_SINK_7
+
+KEY_105       SW1      SW1        io       COL_17
+              SW2      SW2        io       N$126
+              LED+     LED+       io       LED_SOURCE_9_QWERTY
+              LED-     LED-       io       LED_SINK_9
+
+KEY_106       SW1      SW1        io       COL_18
+              SW2      SW2        io       N$123
+              LED+     LED+       io       LED_SOURCE_10_QWERTY
+              LED-     LED-       io       LED_SINK_9
+
+KEY_107       SW1      SW1        io       COL_19
+              SW2      SW2        io       N$122
+              LED+     LED+       io       LED_SOURCE_9_QWERTY
+              LED-     LED-       io       LED_SINK_10
+
+KEY_108       SW1      SW1        io       COL_20
+              SW2      SW2        io       N$119
+              LED+     LED+       io       LED_SOURCE_10_QWERTY
+              LED-     LED-       io       LED_SINK_10
+
+KEY_109       SW1      SW1        io       COL_21
+              SW2      SW2        io       N$115
+              LED+     LED+       io       LED_SORUCE_9_NUM
+              LED-     LED-       io       LED_SINK_11
+
+KEY_110       SW1      SW1        io       COL_22
+              SW2      SW2        io       N$111
+              LED+     LED+       io       LED_SOURCE_10_NUM
+              LED-     LED-       io       LED_SINK_11
+
+KEY_111       SW1      SW1        io       COL_23
+              SW2      SW2        io       N$109
+              LED+     LED+       io       LED_SORUCE_9_NUM
+              LED-     LED-       io       LED_SINK_12
+
+KEY_112       SW1      SW1        io       COL_24
+              SW2      SW2        io       N$107
+              LED+     LED+       io       LED_SOURCE_10_NUM
+              LED-     LED-       io       LED_SINK_12
+
+KEY_113       SW1      SW1        io       COL_1_XFUNC
+              SW2      SW2        io       N$117
+              LED+     LED+       io       LED_SOURCE_11_XFUNC
+              LED-     LED-       io       LED_SINK_1_XFUNC
+
+KEY_114       SW1      SW1        io       COL_2_XFUNC
+              SW2      SW2        io       N$134
+              LED+     LED+       io       LED_SOURCE_12_XFUNC
+              LED-     LED-       io       LED_SINK_1_XFUNC
+
+KEY_115       SW1      SW1        io       COL_3
+              SW2      SW2        io       N$167
+              LED+     LED+       io       LED_SOURCE_11_QWERTY
+              LED-     LED-       io       LED_SINK_2
+
+KEY_116       SW1      SW1        io       COL_4
+              SW2      SW2        io       N$164
+              LED+     LED+       io       LED_SOURCE_12_QWERTY
+              LED-     LED-       io       LED_SINK_2
+
+KEY_117       SW1      SW1        io       COL_5
+              SW2      SW2        io       N$162
+              LED+     LED+       io       LED_SOURCE_11_QWERTY
+              LED-     LED-       io       LED_SINK_3
+
+KEY_118       SW1      SW1        io       COL_6
+              SW2      SW2        io       N$160
+              LED+     LED+       io       LED_SOURCE_12_QWERTY
+              LED-     LED-       io       LED_SINK_3
+
+KEY_119       SW1      SW1        io       COL_7
+              SW2      SW2        io       N$158
+              LED+     LED+       io       LED_SOURCE_11_QWERTY
+              LED-     LED-       io       LED_SINK_4
+
+KEY_120       SW1      SW1        io       COL_8
+              SW2      SW2        io       N$156
+              LED+     LED+       io       LED_SOURCE_12_QWERTY
+              LED-     LED-       io       LED_SINK_4
+
+KEY_121       SW1      SW1        io       COL_9
+              SW2      SW2        io       N$154
+              LED+     LED+       io       LED_SOURCE_11_QWERTY
+              LED-     LED-       io       LED_SINK_5
+
+KEY_122       SW1      SW1        io       COL_10
+              SW2      SW2        io       N$152
+              LED+     LED+       io       LED_SOURCE_12_QWERTY
+              LED-     LED-       io       LED_SINK_5
+
+KEY_123       SW1      SW1        io       COL_11
+              SW2      SW2        io       N$150
+              LED+     LED+       io       LED_SOURCE_11_QWERTY
+              LED-     LED-       io       LED_SINK_6
+
+KEY_124       SW1      SW1        io       COL_12
+              SW2      SW2        io       N$145
+              LED+     LED+       io       LED_SOURCE_12_QWERTY
+              LED-     LED-       io       LED_SINK_6
+
+KEY_125       SW1      SW1        io       COL_13
+              SW2      SW2        io       N$147
+              LED+     LED+       io       LED_SOURCE_11_QWERTY
+              LED-     LED-       io       LED_SINK_7
+
+KEY_126       SW1      SW1        io       COL_17
+              SW2      SW2        io       N$148
+              LED+     LED+       io       LED_SOURCE_11_QWERTY
+              LED-     LED-       io       LED_SINK_9
+
+KEY_127       SW1      SW1        io       COL_18
+              SW2      SW2        io       N$146
+              LED+     LED+       io       LED_SOURCE_12_QWERTY
+              LED-     LED-       io       LED_SINK_9
+
+KEY_128       SW1      SW1        io       COL_19
+              SW2      SW2        io       N$144
+              LED+     LED+       io       LED_SOURCE_11_QWERTY
+              LED-     LED-       io       LED_SINK_10
+
+KEY_129       SW1      SW1        io       COL_20
+              SW2      SW2        io       N$142
+              LED+     LED+       io       LED_SOURCE_12_QWERTY
+              LED-     LED-       io       LED_SINK_10
+
+KEY_130       SW1      SW1        io       COL_21
+              SW2      SW2        io       N$143
+              LED+     LED+       io       LED_SOURCE_11_NUM
+              LED-     LED-       io       LED_SINK_11
+
+KEY_131       SW1      SW1        io       COL_22
+              SW2      SW2        io       N$141
+              LED+     LED+       io       LED_SOURCE_12_NUM
+              LED-     LED-       io       LED_SINK_11
+
+KEY_132       SW1      SW1        io       COL_23
+              SW2      SW2        io       N$136
+              LED+     LED+       io       LED_SOURCE_11_NUM
+              LED-     LED-       io       LED_SINK_12
+
+KEY_133       SW1      SW1        io       COL_1_XFUNC
+              SW2      SW2        io       N$149
+              LED+     LED+       io       LED_SOURCE_13_XFUNC
+              LED-     LED-       io       LED_SINK_1_XFUNC
+
+KEY_134       SW1      SW1        io       COL_2_XFUNC
+              SW2      SW2        io       N$153
+              LED+     LED+       io       LED_SOURCE_14_XFUNC
+              LED-     LED-       io       LED_SINK_1_XFUNC
+
+KEY_135       SW1      SW1        io       COL_3
+              SW2      SW2        io       N$169
+              LED+     LED+       io       LED_SOURCE_13_QWERTY
+              LED-     LED-       io       LED_SINK_2
+
+KEY_136       SW1      SW1        io       COL_4
+              SW2      SW2        io       N$183
+              LED+     LED+       io       LED_SOURCE_14_QWERTY
+              LED-     LED-       io       LED_SINK_2
+
+KEY_137       SW1      SW1        io       COL_5
+              SW2      SW2        io       N$180
+              LED+     LED+       io       LED_SOURCE_13_QWERTY
+              LED-     LED-       io       LED_SINK_3
+
+KEY_138       SW1      SW1        io       COL_8
+              SW2      SW2        io       N$178
+              LED+     LED+       io       LED_SOURCE_14_QWERTY
+              LED-     LED-       io       LED_SINK_4
+
+KEY_139       SW1      SW1        io       COL_12
+              SW2      SW2        io       N$176
+              LED+     LED+       io       LED_SOURCE_14_QWERTY
+              LED-     LED-       io       LED_SINK_6
+
+KEY_140       SW1      SW1        io       COL_13
+              SW2      SW2        io       N$174
+              LED+     LED+       io       LED_SOURCE_13_QWERTY
+              LED-     LED-       io       LED_SINK_7
+
+KEY_141       SW1      SW1        io       COL_14
+              SW2      SW2        io       N$172
+              LED+     LED+       io       LED_SOURCE_14_QWERTY
+              LED-     LED-       io       LED_SINK_7
+
+KEY_142       SW1      SW1        io       COL_17
+              SW2      SW2        io       N$171
+              LED+     LED+       io       LED_SOURCE_13_QWERTY
+              LED-     LED-       io       LED_SINK_9
+
+KEY_143       SW1      SW1        io       COL_18
+              SW2      SW2        io       N$168
+              LED+     LED+       io       LED_SOURCE_14_QWERTY
+              LED-     LED-       io       LED_SINK_9
+
+KEY_144       SW1      SW1        io       COL_19
+              SW2      SW2        io       N$163
+              LED+     LED+       io       LED_SOURCE_13_QWERTY
+              LED-     LED-       io       LED_SINK_10
+
+KEY_145       SW1      SW1        io       COL_20
+              SW2      SW2        io       N$166
+              LED+     LED+       io       LED_SOURCE_14_QWERTY
+              LED-     LED-       io       LED_SINK_10
+
+KEY_146       SW1      SW1        io       COL_21
+              SW2      SW2        io       N$159
+              LED+     LED+       io       LED_SOURCE_13_NUM
+              LED-     LED-       io       LED_SINK_11
+
+KEY_147       SW1      SW1        io       COL_22
+              SW2      SW2        io       N$165
+              LED+     LED+       io       LED_SOURCE_14_NUM
+              LED-     LED-       io       LED_SINK_11
+
+KEY_148       SW1      SW1        io       COL_23
+              SW2      SW2        io       N$161
+              LED+     LED+       io       LED_SOURCE_13_NUM
+              LED-     LED-       io       LED_SINK_12
+
+KEY_149       SW1      SW1        io       COL_24
+              SW2      SW2        io       N$155
+              LED+     LED+       io       LED_SOURCE_14_NUM
+              LED-     LED-       io       LED_SINK_12
+
+KEY_150       SW1      SW1        io       COL_21_MACRO
+              SW2      SW2        io       N$91
+              LED+     LED+       io       LED_SOURCE_1_NUM
+              LED-     LED-       io       LED_SINK_11_MACRO
+
+KEY_151       SW1      SW1        io       COL_22_MACRO
+              SW2      SW2        io       N$99
+              LED+     LED+       io       LED_SOURCE_2_NUM
+              LED-     LED-       io       LED_SINK_11_MACRO
+
+KEY_152       SW1      SW1        io       COL_23_MACRO
+              SW2      SW2        io       N$124
+              LED+     LED+       io       LED_SOURCE_1_NUM
+              LED-     LED-       io       LED_SINK_12_MACRO
+
+KEY_153       SW1      SW1        io       COL_24_MACRO
+              SW2      SW2        io       N$138
+              LED+     LED+       io       LED_SOURCE_2_NUM
+              LED-     LED-       io       LED_SINK_12_MACRO
+
+L1            1        1          io       VBUS
+              2        2          io       VSYS_5V
+
+L2            1        1          io       N$1
+              2        2          io       GND
+
+R1            1        1          pas      RESET
+              2        2          pas      VDD_3V3
+
+R2            1        1          pas      USB_P
+              2        2          pas      USB_MCU_P
+
+R3            1        1          pas      USB_N
+              2        2          pas      USB_MCU_N
+
+R4            1        1          pas      GND
+              2        2          pas      N$3
+
+R5            1        1          pas      VDD_3V3
+              2        2          pas      I2C0_SDA
+
+R6            1        1          pas      VDD_3V3
+              2        2          pas      I2C0_SCL
+
+R7            1        1          pas      VDD_3V3
+              2        2          pas      INTB_LED_CTRL
+
+R8            1        1          pas      SDB_LED_CTRL
+              2        2          pas      GND
+
+R9            1        1          pas      IICRST_LED_CTRL
+              2        2          pas      GND
+
+R11           1        1          pas      NMI
+              2        2          pas      VDD_3V3
+
+R12           1        1          pas      GND
+              2        2          pas      N$215
+
+R13           1        1          pas      N$214
+              2        2          pas      GND
+
+SCL           TP       TP         in       I2C0_SCL
+
+SDA           TP       TP         in       I2C0_SDA
+
+SJ1           1        1          pas      VLDO_33
+              2        2          pas      VDD_3V3
+              3        3          pas      VOUT_33
+
+SJ2           1        1          pas      COL_1_XFUNC
+              2        2          pas      COL_1_XFUNC_MACRO
+
+SJ3           1        1          pas      COL_2_XFUNC
+              2        2          pas      COL_2_XFUNC_MACRO
+
+SJ4           1        1          pas      COL_3
+              2        2          pas      COL_3_MACRO
+
+SJ5           1        1          pas      COL_4
+              2        2          pas      COL_4_MACRO
+
+SJ6           1        1          pas      COL_5
+              2        2          pas      COL_5_MACRO
+
+SJ7           1        1          pas      COL_6
+              2        2          pas      COL_6_MACRO
+
+SJ8           1        1          pas      COL_7
+              2        2          pas      COL_7_MACRO
+
+SJ9           1        1          pas      COL_8
+              2        2          pas      COL_8_MACRO
+
+SJ10          1        1          pas      COL_9
+              2        2          pas      COL_9_MACRO
+
+SJ11          1        1          pas      COL_10
+              2        2          pas      COL_10_MACRO
+
+SJ12          1        1          pas      COL_11
+              2        2          pas      COL_11_MACRO
+
+SJ13          1        1          pas      COL_12
+              2        2          pas      COL_12_MACRO
+
+SJ14          1        1          pas      COL_13
+              2        2          pas      COL_13_MACRO
+
+SJ15          1        1          pas      COL_14
+              2        2          pas      COL_14_MACRO
+
+SJ16          1        1          pas      COL_15
+              2        2          pas      COL_15_MACRO
+
+SJ17          1        1          pas      COL_16
+              2        2          pas      COL_16_MACRO
+
+SJ18          1        1          pas      COL_17
+              2        2          pas      COL_17_MACRO
+
+SJ19          1        1          pas      COL_18
+              2        2          pas      COL_18_MACRO
+
+SJ20          1        1          pas      COL_19
+              2        2          pas      COL_19_MACRO
+
+SJ21          1        1          pas      COL_20
+              2        2          pas      COL_20_MACRO
+
+SJ22          1        1          pas      COL_21
+              2        2          pas      COL_21_MACRO
+
+SJ23          1        1          pas      COL_22
+              2        2          pas      COL_22_MACRO
+
+SJ24          1        1          pas      COL_23
+              2        2          pas      COL_23_MACRO
+
+SJ25          1        1          pas      COL_24
+              2        2          pas      COL_24_MACRO
+
+SJ26          1        1          pas      ROW_1_QWERTY
+              2        2          pas      ROW_1_XFUNC
+
+SJ27          1        1          pas      ROW_2_QWERTY
+              2        2          pas      ROW_2_XFUNC
+
+SJ28          1        1          pas      ROW_3_QWERTY
+              2        2          pas      ROW_3_XFUNC
+
+SJ29          1        1          pas      ROW_4_QWERTY
+              2        2          pas      ROW_4_XFUNC
+
+SJ30          1        1          pas      ROW_5_QWERTY
+              2        2          pas      ROW_5_XFUNC
+
+SJ31          1        1          pas      ROW_6_QWERTY
+              2        2          pas      ROW_6_XFUNC
+
+SJ32          1        1          pas      ROW_7_QWERTY
+              2        2          pas      ROW_7_XFUNC
+
+SJ33          1        1          pas      COL_1_XFUNC
+              2        2          pas      COL_1
+
+SJ34          1        1          pas      COL_2_XFUNC
+              2        2          pas      COL_2
+
+SJ35          1        1          pas      ROW_1_QWERTY
+              2        2          pas      ROW_1
+
+SJ36          1        1          pas      ROW_1_NUM
+              2        2          pas      ROW_1_QWERTY
+
+SJ37          1        1          pas      ROW_2_NUM
+              2        2          pas      ROW_2_QWERTY
+
+SJ38          1        1          pas      ROW_3_NUM
+              2        2          pas      ROW_3_QWERTY
+
+SJ39          1        1          pas      ROW_4_NUM
+              2        2          pas      ROW_4_QWERTY
+
+SJ40          1        1          pas      ROW_5_NUM
+              2        2          pas      ROW_5_QWERTY
+
+SJ41          1        1          pas      ROW_6_NUM
+              2        2          pas      ROW_6_QWERTY
+
+SJ42          1        1          pas      ROW_7_NUM
+              2        2          pas      ROW_7_QWERTY
+
+SJ43          1        1          pas      LED_SOURCE_2_NUM
+              2        2          pas      LED_SOURCE_2_QWERY
+
+SJ44          1        1          pas      LED_SOURCE_1_NUM
+              2        2          pas      LED_SOURCE_1_QWERTY
+
+SJ45          1        1          pas      LED_SOURCE_1_QWERTY
+              2        2          pas      LED_SOURCE_1_XFUNC
+
+SJ46          1        1          pas      LED_SOURCE_2_QWERY
+              2        2          pas      LED_SOURCE_2_XFUNC
+
+SJ47          1        1          pas      LED_SINK_1_XFUNC
+              2        2          pas      LED_SINK_1_XFUNC_MACRO
+
+SJ48          1        1          pas      LED_SINK_2
+              2        2          pas      LED_SINK_2_MACRO
+
+SJ49          1        1          pas      LED_SINK_3
+              2        2          pas      LED_SINK_3_MACRO
+
+SJ50          1        1          pas      LED_SINK_4
+              2        2          pas      LED_SINK_4_MACRO
+
+SJ51          1        1          pas      LED_SINK_5
+              2        2          pas      LED_SINK_5_MACRO
+
+SJ52          1        1          pas      LED_SINK_6
+              2        2          pas      LED_SINK_6_MACRO
+
+SJ53          1        1          pas      LED_SINK_7
+              2        2          pas      LED_SINK_7_MACRO
+
+SJ54          1        1          pas      LED_SINK_8
+              2        2          pas      LED_SINK_8_MACRO
+
+SJ55          1        1          pas      LED_SINK_9
+              2        2          pas      LED_SINK_9_MACRO
+
+SJ56          1        1          pas      LED_SINK_10
+              2        2          pas      LED_SINK_10_MACRO
+
+SJ57          1        1          pas      LED_SINK_11
+              2        2          pas      LED_SINK_11_MACRO
+
+SJ58          1        1          pas      LED_SINK_12
+              2        2          pas      LED_SINK_12_MACRO
+
+SJ59          1        1          pas      LED_SOURCE_3_XFUNC
+              2        2          pas      LED_SOURCE_3_QWERTY
+
+SJ60          1        1          pas      LED_SOURCE_4_XFUNC
+              2        2          pas      LED_SOURCE_4_QWERTY
+
+SJ61          1        1          pas      LED_SOURCE_3_NUM
+              2        2          pas      LED_SOURCE_3_QWERTY
+
+SJ62          1        1          pas      LED_SOURCE_4_NUM
+              2        2          pas      LED_SOURCE_4_QWERTY
+
+SJ63          1        1          pas      LED_SOURCE_5_XFUNC
+              2        2          pas      LED_SOURCE_5_QWERTY
+
+SJ64          1        1          pas      LED_SOURCE_6_XFUNC
+              2        2          pas      LED_SOURCE_6_QWERTY
+
+SJ65          1        1          pas      LED_SOURCE_5_NUM
+              2        2          pas      LED_SOURCE_5_QWERTY
+
+SJ66          1        1          pas      LED_SOURCE_6_NUM
+              2        2          pas      LED_SOURCE_6_QWERTY
+
+SJ67          1        1          pas      LED_SOURCE_7_QWERTY
+              2        2          pas      LED_SOURCE_7_XFUNC
+
+SJ68          1        1          pas      LED_SOURCE_8_QWERTY
+              2        2          pas      LED_SOURCE_8_XFUNC
+
+SJ69          1        1          pas      LED_SOURCE_7_NUM
+              2        2          pas      LED_SOURCE_7_QWERTY
+
+SJ70          1        1          pas      LED_SOURCE_8_NUM
+              2        2          pas      LED_SOURCE_8_QWERTY
+
+SJ71          1        1          pas      LED_SOURCE_9_QWERTY
+              2        2          pas      LED_SOURCE_9_XFUNC
+
+SJ72          1        1          pas      LED_SOURCE_10_QWERTY
+              2        2          pas      LED_SORUCE_10_XFUNC
+
+SJ73          1        1          pas      LED_SORUCE_9_NUM
+              2        2          pas      LED_SOURCE_9_QWERTY
+
+SJ74          1        1          pas      LED_SOURCE_10_NUM
+              2        2          pas      LED_SOURCE_10_QWERTY
+
+SJ75          1        1          pas      LED_SOURCE_11_QWERTY
+              2        2          pas      LED_SOURCE_11_XFUNC
+
+SJ76          1        1          pas      LED_SOURCE_12_QWERTY
+              2        2          pas      LED_SOURCE_12_XFUNC
+
+SJ77          1        1          pas      LED_SOURCE_11_NUM
+              2        2          pas      LED_SOURCE_11_QWERTY
+
+SJ78          1        1          pas      LED_SOURCE_12_NUM
+              2        2          pas      LED_SOURCE_12_QWERTY
+
+SJ79          1        1          pas      LED_SOURCE_13_QWERTY
+              2        2          pas      LED_SOURCE_13_XFUNC
+
+SJ80          1        1          pas      LED_SOURCE_14_QWERTY
+              2        2          pas      LED_SOURCE_14_XFUNC
+
+SJ81          1        1          pas      LED_SOURCE_13_NUM
+              2        2          pas      LED_SOURCE_13_QWERTY
+
+SJ82          1        1          pas      LED_SOURCE_14_NUM
+              2        2          pas      LED_SOURCE_14_QWERTY
+
+SJ83          1        1          pas      LED_SOURCE_1_QWERTY
+              2        2          pas      LED_SOURCE_1_CTRL
+
+SJ84          1        1          pas      LED_SOURCE_2_QWERY
+              2        2          pas      LED_SOURCE_2_CTRL
+
+SJ85          1        1          pas      LED_SINK_1_CTRL
+              2        2          pas      LED_SINK_1_XFUNC
+
+SJ86          1        1          pas      LED_SINK_11
+              2        2          pas      LED_SINK_11_CTRL
+
+SJ87          1        1          pas      LED_SINK_12
+              2        2          pas      LED_SINK_12_CTRL
+
+SJ_MCU_COL1   1        1          pas      COL_1
+              2        2          pas      COL_1{MCU}
+
+SJ_MCU_COL2   1        1          pas      COL_2
+              2        2          pas      COL_2{MCU}
+
+SJ_MCU_COL3   1        1          pas      COL_3
+              2        2          pas      COL_3{MCU}
+
+SJ_MCU_COL4   1        1          pas      COL_4
+              2        2          pas      COL_4{MCU}
+
+SJ_MCU_COL5   1        1          pas      COL_5
+              2        2          pas      COL_5{MCU}
+
+SJ_MCU_COL6   1        1          pas      COL_6
+              2        2          pas      COL_6{MCU}
+
+SJ_MCU_COL7   1        1          pas      COL_7
+              2        2          pas      COL_7{MCU}
+
+SJ_MCU_COL8   1        1          pas      COL_8
+              2        2          pas      COL_8{MCU}
+
+SJ_MCU_COL9   1        1          pas      COL_9
+              2        2          pas      COL_9{MCU}
+
+SJ_MCU_COL10  1        1          pas      COL_10
+              2        2          pas      COL_10{MCU}
+
+SJ_MCU_COL11  1        1          pas      COL_11
+              2        2          pas      COL_11{MCU}
+
+SJ_MCU_COL12  1        1          pas      COL_12
+              2        2          pas      COL_12{MCU}
+
+SJ_MCU_COL13  1        1          pas      COL_13
+              2        2          pas      COL_13{MCU}
+
+SJ_MCU_COL14  1        1          pas      COL_14
+              2        2          pas      COL_14{MCU}
+
+SJ_MCU_COL15  1        1          pas      COL_15
+              2        2          pas      COL_15{MCU}
+
+SJ_MCU_COL16  1        1          pas      COL_16
+              2        2          pas      COL_16{MCU}
+
+SJ_MCU_COL17  1        1          pas      COL_17
+              2        2          pas      COL_17{MCU}
+
+SJ_MCU_COL18  1        1          pas      COL_18
+              2        2          pas      COL_18{MCU}
+
+SJ_MCU_COL19  1        1          pas      COL_19
+              2        2          pas      COL_19{MCU}
+
+SJ_MCU_COL20  1        1          pas      COL_20
+              2        2          pas      COL_20{MCU}
+
+SJ_MCU_COL21  1        1          pas      COL_21
+              2        2          pas      COL_21{MCU}
+
+SJ_MCU_COL22  1        1          pas      COL_22
+              2        2          pas      COL_22{MCU}
+
+SJ_MCU_COL23  1        1          pas      COL_23
+              2        2          pas      COL_23{MCU}
+
+SJ_MCU_COL24  1        1          pas      COL_24
+              2        2          pas      COL_24{MCU}
+
+SJ_MCU_ROW1   1        1          pas      ROW_1
+              2        2          pas      ROW_1{MCU}
+
+SJ_MCU_ROW2   1        1          pas      ROW_2_QWERTY
+              2        2          pas      ROW_2{MCU}
+
+SJ_MCU_ROW3   1        1          pas      ROW_3_QWERTY
+              2        2          pas      ROW_3{MCU}
+
+SJ_MCU_ROW4   1        1          pas      ROW_4_QWERTY
+              2        2          pas      ROW_4{MCU}
+
+SJ_MCU_ROW5   1        1          pas      ROW_5_QWERTY
+              2        2          pas      ROW_5{MCU}
+
+SJ_MCU_ROW6   1        1          pas      ROW_6_QWERTY
+              2        2          pas      ROW_6{MCU}
+
+SJ_MCU_ROW7   1        1          pas      ROW_7_QWERTY
+              2        2          pas      ROW_7{MCU}
+
+SV1           1        1          pas      VDD_3V3
+              2        2          pas      UART3_TX
+              3        3          pas      UART3_RX
+              4        4          pas      GND
+
+SW1           1        1          pas      RESET
+              2        2          pas      RESET
+              3        3          pas      GND
+              4        4          pas      GND
+
+TVS1          1        1          io       VBUS
+              2        2          io       GND
+
+TVS2          1        1          io       GND
+              2        2          io       USB_N
+
+TVS3          1        1          io       GND
+              2        2          io       USB_P
+
+U1            1        PTE0       io       COL_1{MCU}
+              2        PTE1/LLWU_P0 io       COL_2{MCU}
+              3        PTE2/LLWU_P1 io       COL_6{MCU}
+              4        PTE3       io       COL_7{MCU}
+              5        VDD_2      pwr      VDD_3V3
+              6        VSS_2      pwr      GND
+              7        PTE4/LLWU_P2 io       COL_16{MCU}
+              8        PTE5       io       ROW_1{MCU}
+              9        PTE6       io       ROW_2{MCU}
+              10       PTE7       io                *** unconnected ***
+              11       PTE8       io                *** unconnected ***
+              12       PTE9       io                *** unconnected ***
+              13       PTE10      io                *** unconnected ***
+              14       PTE11      io                *** unconnected ***
+              15       PTE12      io                *** unconnected ***
+              16       VDD_3      pwr      VDD_3V3
+              17       VSS_3      pwr      GND
+              18       VSS_7      pwr      GND
+              19       USB0_DP    io       USB_MCU_P
+              20       USB0_DM    io       USB_MCU_N
+              21       VOUT33     pwr      VOUT_33
+              22       VREGIN     pwr      VSYS_5V
+              23       ADC0_DP1   io                *** unconnected ***
+              24       ADC0_DM1   io                *** unconnected ***
+              25       ADC1_DP1   io                *** unconnected ***
+              26       ADC1_DM1   io                *** unconnected ***
+              27       ADC0_DP0/ADC1_DP3 io                *** unconnected ***
+              28       ADC0_DM0/ADC1_DM3 io                *** unconnected ***
+              29       ADC1_DP0/ADC0_DP3 io                *** unconnected ***
+              30       ADC1_DM0/ADC0_DM3 io                *** unconnected ***
+              31       VDDA       pwr      VDD_3V3
+              32       VREFH      pwr      VDD_3V3
+              33       VREFL      pwr      GND
+              34       VSSA       pwr      GND
+              35       ADC1_SE16/CMP2_IN2/ADC0_SE22 io                *** unconnected ***
+              36       ADC0_SE16/CMP1_IN2/ADC0_SE21 io                *** unconnected ***
+              37       DAC1_OUT/CMP1_IN5/CMP0_IN5/ADC1_SE18 io                *** unconnected ***
+              38       DAC0_OUT/CMP1_IN3/ADC0_SE23 io                *** unconnected ***
+              39       DAC1_OUT/CMP0_IN4/CMP2_IN3/ADC1_SE23 io                *** unconnected ***
+              40       XTAL32     pas      XTAL32
+              41       EXTAL32    pas      EXTAL32
+              42       VBAT       pwr      VDD_3V3
+              43       VDD_4      pwr      VDD_3V3
+              44       VSS_5      pwr      GND
+              45       PTE24      io                *** unconnected ***
+              46       PTE25      io                *** unconnected ***
+              47       PTE26      io       COL_24{MCU}
+              48       PTE27      io       COL_23{MCU}
+              49       PTE28      io                *** unconnected ***
+              50       PTA0       io       JTAG_TCLK/SWD_CLK
+              51       PTA1       io       JTAG_TDI
+              52       PTA2       io       JTAG_TDO/TRACE_SWO
+              53       PTA3       io       JTAG_TMS/SWD_DIO
+              54       PTA4/LLWU_P3 io       NMI
+              55       PTA5       io       COL_22{MCU}
+              56       VDD_5      pwr      VDD_3V3
+              57       VSS_6      pwr      GND
+              58       PTA6       io       COL_21{MCU}
+              59       PTA7       io       COL_20{MCU}
+              60       PTA8       io                *** unconnected ***
+              61       PTA9       io                *** unconnected ***
+              62       PTA10      io                *** unconnected ***
+              63       PTA11      io                *** unconnected ***
+              64       PTA12      io       COL_19{MCU}
+              65       PTA13/LLWU_P4 io                *** unconnected ***
+              66       PTA14      io       COL_18{MCU}
+              67       PTA15      io                *** unconnected ***
+              68       PTA16      io                *** unconnected ***
+              69       PTA17      io                *** unconnected ***
+              70       VDD        pwr      VDD_3V3
+              71       VSS        pwr      GND
+              72       PTA18      io       EXTAL
+              73       PTA19      io       XTAL
+              74       RESET_B    pas      RESET
+              75       PTA24      io                *** unconnected ***
+              76       PTA25      io                *** unconnected ***
+              77       PTA26      io                *** unconnected ***
+              78       PTA27      io                *** unconnected ***
+              79       PTA28      io                *** unconnected ***
+              80       PTA29      io                *** unconnected ***
+              81       PTB0/LLWU_P5 io                *** unconnected ***
+              82       PTB1       io       I2C0_SDA
+              83       PTB2       io       I2C0_SCL
+              84       PTB3       io       ROW_7{MCU}
+              85       PTB4       io       ROW_6{MCU}
+              86       PTB5       io                *** unconnected ***
+              87       PTB6       io       ROW_5{MCU}
+              88       PTB7       io                *** unconnected ***
+              89       PTB8       io                *** unconnected ***
+              90       PTB9       io                *** unconnected ***
+              91       PTB10      io       UART3_RX
+              92       PTB11      io       UART3_TX
+              93       VSS_2      pwr      GND
+              94       VDD_2      pwr      VDD_3V3
+              95       PTB16      io                *** unconnected ***
+              96       PTB17      io       INTB_LED_CTRL
+              97       PTB18      io       SDB_LED_CTRL
+              98       PTB19      io                *** unconnected ***
+              99       PTB20      io       ROW_4{MCU}
+              100      PTB21      io       ROW_3{MCU}
+              101      PTB22      io                *** unconnected ***
+              102      PTB23      io                *** unconnected ***
+              103      PTC0       io                *** unconnected ***
+              104      PTC1/LLWU_P6 io                *** unconnected ***
+              105      PTC2       io                *** unconnected ***
+              106      PTC3/LLWU_P7 io                *** unconnected ***
+              107      VSS_3      pwr      GND
+              108      VDD_3      pwr      VDD_3V3
+              109      PTC4/LLWU_P8 io                *** unconnected ***
+              110      PTC5/LLWU_P9 io       SPI0_SCK
+              111      PTC6/LLWU_P10 io       SPI0_SOUT
+              112      PTC7       io       SPI0_SIN
+              113      PTC8       io       FTM3_CH4
+              114      PTC9       io                *** unconnected ***
+              115      PTC10      io       I2C1_SCL
+              116      PTC11/LLWU_P11 io       I2C1_SDA
+              117      PTC12      io                *** unconnected ***
+              118      PTC13      io                *** unconnected ***
+              119      PTC14      io                *** unconnected ***
+              120      PTC15      io                *** unconnected ***
+              121      VSS_4      pwr      GND
+              122      VDD_4      pwr      VDD_3V3
+              123      PTC16      io                *** unconnected ***
+              124      PTC17      io                *** unconnected ***
+              125      PTC18      io                *** unconnected ***
+              126      PTC19      io                *** unconnected ***
+              127      PTD0/LLWU_P12 io                *** unconnected ***
+              128      PTD1       io                *** unconnected ***
+              129      PTD2/LLWU_P13 io       UART2_RX
+              130      PTD3       io       UART2_TX
+              131      PTD4/LLWU_P14 io       COL_17{MCU}
+              132      PTD5       io       COL_15{MCU}
+              133      PTD6/LLWU_P15 io       COL_14{MCU}
+              134      VSS        pwr      GND
+              135      VDD        pwr      VDD_3V3
+              136      PTD7       io       COL_13{MCU}
+              137      PTD8       io       COL_12{MCU}
+              138      PTD9       io       COL_11{MCU}
+              139      PTD10      io       COL_10{MCU}
+              140      PTD11      io       COL_9{MCU}
+              141      PTD12      io       COL_8{MCU}
+              142      PTD13      io       COL_5{MCU}
+              143      PTD14      io       COL_4{MCU}
+              144      PTD15      io       COL_3{MCU}
+
+U2            1        VOUT       io       VLDO_33
+              2        NC         nc                *** unconnected ***
+              3        NC_2       nc                *** unconnected ***
+              4        NC_3       nc                *** unconnected ***
+              5        EN         io       VLDO_5V
+              6        GND        io       GND
+              7        GND_2      io       GND
+              8        VIN        io       VLDO_5V
+
+U3            1        NC         nc                *** unconnected ***
+              2        SW1        io       LED_SINK_12_CTRL
+              3        SW2        io       LED_SINK_11_CTRL
+              4        SW3        io       LED_SINK_10
+              5        PGND       io       GND
+              6        SW4        io       LED_SINK_9
+              7        SW5        io       LED_SINK_8
+              8        SW6        io       LED_SINK_7
+              9        SW7        io       LED_SINK_6
+              10       SW8        io       LED_SINK_5
+              11       SW9        io       LED_SINK_4
+              12       PGND_2     io       GND
+              13       SW10       io       LED_SINK_3
+              14       SW11       io       LED_SINK_2
+              15       SW12       io       LED_SINK_1_CTRL
+              16       CS1        io       LED_SOURCE_1_CTRL
+              17       CS2        io       LED_SOURCE_2_CTRL
+              18       CS3        io       LED_SOURCE_3_QWERTY
+              19       CS4        io       LED_SOURCE_4_QWERTY
+              20       PVCC       io       VLDO_5V
+              21       CS5        io       LED_SOURCE_5_QWERTY
+              22       CS6        io       LED_SOURCE_6_QWERTY
+              23       CS7        io       LED_SOURCE_7_QWERTY
+              24       CS8        io       LED_SOURCE_8_QWERTY
+              25       CS9        io       LED_SOURCE_9_QWERTY
+              26       CS10       io       LED_SOURCE_10_QWERTY
+              27       CS11       io       LED_SOURCE_11_QWERTY
+              28       CS12       io       LED_SOURCE_12_QWERTY
+              29       PVCC_2     io       VLDO_5V
+              30       CS13       io       LED_SOURCE_13_QWERTY
+              31       CS14       io       LED_SOURCE_14_QWERTY
+              32       CS15       io                *** unconnected ***
+              33       CS16       io                *** unconnected ***
+              34       AGND       io       GND
+              35       ISET       io       N$3
+              36       NC_2       nc                *** unconnected ***
+              37       AVCC       io       VLDO_5V
+              38       DVCC       io       VLDO_5V
+              39       VIO        io       VDD_3V3
+              40       SYNC       io                *** unconnected ***
+              41       SDA        io       I2C0_SDA
+              42       SCL        io       I2C0_SCL
+              43       ADDR1      io       GND
+              44       ADDR2      io       GND
+              45       INTB       io       INTB_LED_CTRL
+              46       SDB        io       SDB_LED_CTRL
+              47       IICRST     io       IICRST_LED_CTRL
+              48       GND        io       GND
+              PAD      PAD_GND    io       GND
+
+VDD_3V3       TP       TP         in       VDD_3V3
+
+VLDO_5V       TP       TP         in       VLDO_5V
+
+Y1            1        1          pas      XTAL
+              2        GND        pwr      GND
+              3        3          pas      EXTAL
+              4        GND        pwr      GND
+
+Y2            1        1          pas      EXTAL32
+              2        2          pas      XTAL32
+
