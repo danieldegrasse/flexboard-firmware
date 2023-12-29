@@ -2,3 +2,4 @@
 build*
 /zmk
 *.swp
+.DS_Store
