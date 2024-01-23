@@ -10,6 +10,13 @@ This repository is intended to be build against the downstream Zephyr branch
 [frozen/flexeval-branch](https://github.com/danieldegrasse/zephyr/tree/frozen/flexeval-branch)
 based on Zephyr 3.3
 
+# Hardware Repository
+
+Autodesk Eagle schematic and board files, as well as PDF schematics, can be
+found in the following repositories:
+- [FlexBoard](https://github.com/danieldegrasse/Flexboard)
+- [FlexEval](https://github.com/danieldegrasse/FlexEval)
+
 ## Directories
 ### Bringup
 
