@@ -58,7 +58,7 @@ manifest:
       import: false
       west-commands: scripts/west-commands.yml
     - name: zmk
-      revision: dcc34eea51142952054c1f243646583d0b5c7281
+      revision: 580b10f1c537d300c82b594fc33856246b7ec636
       remote: danieldegrasse
       path: apps/zmk
       import: false
