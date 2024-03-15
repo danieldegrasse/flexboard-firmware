@@ -476,7 +476,7 @@
 	root_animation: animation_0 {
 		compatible = "zmk,animation-control";
 		label = "ANIMATION_CTRL_0";
-		animations = <&solid &ripple_effect>;
+		animations = <&solid &ripple_effect &off>;
 	};
 
 	solid: animation_1 {
@@ -496,5 +496,14 @@
 		duration = <1000>;
 		color = <HSL(0, 0, 100)>;
 		ripple-width = <50>;
+	};
+
+	off: animation_3 {
+		compatible = "zmk,animation-solid";
+		status = "okay";
+		pixels = <ZONE_KEYS>;
+		duration = <1>;
+		blending-mode = <BLENDING_MODE_NORMAL>;
+		colors = <HSL(0, 0, 0)>;
 	};
 };
