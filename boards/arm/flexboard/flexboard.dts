@@ -97,25 +97,21 @@ zephyr_udc0: &usbotg {
 		};
 		slot0_partition: partition@10000 {
 			label = "image-0";
-			reg = <0x00010000 0x00020000>;
+			reg = <0x00010000 0x00029000>;
 		};
-		slot1_partition: partition@30000 {
+		slot1_partition: partition@39000 {
 			label = "image-1";
-			reg = <0x00030000 0x00020000>;
-		};
-		scratch_partition: partition@50000 {
-			label = "image-scratch";
-			reg = <0x00050000 0x00010000>;
+			reg = <0x00039000 0x00028000>;
 		};
 
 		/*
-		 * The flash starting at 0x00060000 and ending at
-		 * 0x0007ffff (sectors 16-31) is reserved for use
+		 * The flash starting at 0x00061000 and ending at
+		 * 0x0007ffff is reserved for use
 		 * by the application.
 		 */
-		storage_partition: partition@60000 {
+		storage_partition: partition@61000 {
 			label = "storage";
-			reg = <0x00060000 0x00020000>;
+			reg = <0x00061000 0x0001f000>;
 		};
 
 	};
