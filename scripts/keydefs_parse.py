@@ -39,15 +39,16 @@ for row in keyreader:
         continue
     keys[row[0]] = {"row": int(row[1]), "col": int(row[2]),
                     "source": int(row[3]), "sink": int(row[4])}
+
 # Find max and min LED line indices, so that we can make valid pixel coordinates
 led_sources = []
 led_sinks = []
 led_coords = {}
-for coord in keys.values():
+for (key, coord) in keys.items():
     led_sources.append(coord["source"])
     led_sinks.append(coord["sink"])
     # Put a placeholder for the pixel index. We will calculate it later.
-    led_coords[((coord["source"], coord["sink"]))] = -1
+    led_coords[((coord["source"], coord["sink"]))] = {"index": -1, "key": key}
 source_min = min(led_sources) - 1
 source_range = max(led_sources) - min(led_sources)
 sink_min = min(led_sinks) - 1
@@ -71,10 +72,12 @@ for sink in range(12):
         x_coord = int((sink_coord / ((2 * sink_range) + 1)) * 255)
         y_coord = int((((source - source_min) // 2) / (source_range // 2)) * 255)
         if ((source + 1), (sink + 1)) in led_coords:
+            # Add pixel definition
             pixels.append(f"<&pixel {x_coord} {y_coord}>, "
-                          f"/* LED_SINK_{12 - sink}, LED_SOURCE_{source + 1} */")
+                          f"/* LED_SINK_{12 - sink}, LED_SOURCE_{source + 1} "
+                          f" ({led_coords[(source + 1), (sink + 1)]['key']}, {pixel_idx}) */")
             # Record pixel index in pixels array
-            led_coords[(source + 1), (sink + 1)] = pixel_idx
+            led_coords[(source + 1), (sink + 1)]["index"] = pixel_idx
             pixel_idx += 1
         else:
             pixels.append(f"/* LED_SINK_{12 - sink}, "
@@ -101,7 +104,7 @@ pretty_print(chain_ranges, limit=40)
 key_pixels = []
 # Print key pixel definitions
 for (key, coord) in keys.items():
-    offset = led_coords[(coord["source"], coord["sink"])]
+    offset = led_coords[(coord["source"], coord["sink"])]["index"]
     key_pixels.append(str(offset))
 print("Key pixels")
 pretty_print(key_pixels, limit=30)
