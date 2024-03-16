@@ -473,13 +473,42 @@
 			/* LED_SINK_1, LED_SOURCE_16 is not populated */
 	};
 
-	root_animation: animation_0 {
+	root_animation: root-animation {
 		compatible = "zmk,animation-control";
 		label = "ANIMATION_CTRL_0";
-		animations = <&solid &ripple_effect &off>;
+		animations = <&solid_compose &ripple_compose &off_compose>;
 	};
 
-	solid: animation_1 {
+	solid_compose: solid-compose {
+		compatible = "zmk,animation-compose";
+		animations = <&solid &caps_indicator &num_indicator>;
+	};
+
+	ripple_compose: ripple-compose {
+		compatible = "zmk,animation-compose";
+		animations = <&ripple_effect &caps_indicator &num_indicator>;
+	};
+
+	off_compose: off-compose {
+		compatible = "zmk,animation-compose";
+		animations = <&off &caps_indicator &num_indicator>;
+	};
+
+	caps_indicator: caps-indicator {
+		compatible = "zmk,animation-indicator";
+		status = "okay";
+		pixels = <104>;
+		color = <HSL(0, 0, 100)>;
+	};
+
+	num_indicator: num-indicator {
+		compatible = "zmk,animation-indicator";
+		status = "okay";
+		pixels = <3>;
+		color = <HSL(0, 0, 100)>;
+	};
+
+	solid: solid-animation {
 		compatible = "zmk,animation-solid";
 		status = "okay";
 		pixels = <ZONE_KEYS>;
@@ -488,7 +517,7 @@
 		colors = <HSL(0, 0, 100)>;
 	};
 
-	ripple_effect: animation_2 {
+	ripple_effect: ripple-animation {
 		compatible = "zmk,animation-ripple";
 		status = "okay";
 		pixels = <ZONE_KEYS>;
@@ -498,7 +527,7 @@
 		ripple-width = <50>;
 	};
 
-	off: animation_3 {
+	off: off-animation {
 		compatible = "zmk,animation-solid";
 		status = "okay";
 		pixels = <ZONE_KEYS>;

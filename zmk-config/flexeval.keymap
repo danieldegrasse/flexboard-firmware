@@ -17,8 +17,8 @@
 
 		/* Default layer implements 1-3 key matrix, and function key */
 		default_layer {
-			bindings = <&kp NUMBER_1 &kp NUMBER_2
-				&kp NUMBER_3 &mo FUNC>;
+			bindings = <&kp A &kp NUMBER_1
+				&kp CAPS &mo FUNC>;
 		};
 
 		/* Function layer implements special keypresses */

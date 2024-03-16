@@ -7,6 +7,7 @@
 #include <animation.dtsi>
 #include <dt-bindings/zmk/animation.h>
 #include <dt-bindings/zmk/animation_compose.h>
+#include <dt-bindings/zmk/keys.h>
 
 #define DUMMY_PIXEL &pixel 0 0
 /*
@@ -169,10 +170,15 @@
 	root_animation: animation_0 {
 		compatible = "zmk,animation-control";
 		label = "ANIMATION_CTRL_0";
-		animations = <&ripple_effect>;
+		animations = <&compose_animation>;
 	};
 
-	ripple_effect: animation_1 {
+	compose_animation: animation_1 {
+		compatible = "zmk,animation-compose";
+		animations = <&ripple_effect &indicator_led>;
+	};
+
+	ripple_effect: animation_2 {
 		compatible = "zmk,animation-ripple";
 		status = "okay";
 		pixels = <ZONE_KEYS>;
@@ -180,5 +186,13 @@
 		duration = <1000>;
 		color = <HSL(0, 0, 100)>;
 		ripple-width = <50>;
+	};
+
+	indicator_led: animation_3 {
+		compatible = "zmk,animation-indicator";
+		status = "okay";
+		pixels = <0>;
+		key = <CAPS>;
+		color = <HSL(0, 0, 100)>;
 	};
 };

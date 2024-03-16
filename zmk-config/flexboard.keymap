@@ -40,7 +40,7 @@
 			&kp C_PWR
 			&kp GRAVE &kp N1 &kp N2 &kp N3 &kp N4 &kp N5 &kp N6
 			&kp N7 &kp N8 &kp N9 &kp N0 &kp MINUS &kp EQUAL &kp BSPC
-			&kp INS &kp HOME &kp PG_UP &kp D &kp E &kp F &kp KP_ASTERISK
+			&kp INS &kp HOME &kp PG_UP &kp D &kp E &kp F &kp KP_NUMLOCK
 			&kp TAB &kp Q &kp W &kp E &kp R &kp T &kp Y &kp U &kp I
 			&kp O &kp P &kp LBKT &kp RBKT &kp BSLH &kp DEL &kp END
 			&kp PG_DN &kp A &kp B &kp C &kp KP_N0
@@ -66,7 +66,7 @@
 			&kp C_VOL_UP
 			&kp GRAVE &kp N1 &kp N2 &kp N3 &kp N4 &kp N5 &kp N6
 			&kp N7 &kp N8 &kp N9 &kp N0 &kp MINUS &kp EQUAL &kp BSPC
-			&kp INS &kp HOME &kp PG_UP &kp D &kp E &kp F &kp C_PWR
+			&kp INS &kp HOME &kp PG_UP &kp D &kp E &kp F &kp KP_NUMLOCK
 			&kp TAB &kp Q &kp W &kp E &kp R &kp T &kp Y &kp U &kp I
 			&kp O &kp P &kp LBKT &kp RBKT &kp BSLH &kp DEL &kp END
 			&kp PG_DN &kp A &kp B &kp C &kp KP_N0
@@ -86,4 +86,17 @@
 
 
 	};
+};
+
+/*
+ * Set the keycodes for the indicator animations here. We can't do this
+ * in the overlay file because the keys.h DT binding causes a macro collision
+ * with the RC(row, col) macro defined for ZMK matrix transforms
+ */
+&num_indicator {
+    key = <KP_NUMLOCK>;
+};
+
+&caps_indicator {
+    key = <CAPS>;
 };
