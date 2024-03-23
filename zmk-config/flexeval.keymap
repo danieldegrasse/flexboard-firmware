@@ -24,7 +24,7 @@
 		/* Function layer implements special keypresses */
 		function_layer {
 			bindings = <&bootloader &animation ANIMATION_TOGGLE(0)
-				&kp C_PLAY_PAUSE &kp NUMBER_0>;
+				&kp SYSTEM_SLEEP &kp NUMBER_0>;
 		};
 	};
 };
