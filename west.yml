@@ -52,7 +52,7 @@ manifest:
       groups:
         - crypto
     - name: zephyr
-      revision: c3782ae9cc3e471245ebd4662a9f078b69c15661
+      revision: 69346561e3309b8d402a896e4bbe4c8a84b51470
       remote: danieldegrasse
       path: zephyr
       import: false
