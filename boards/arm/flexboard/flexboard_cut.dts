@@ -13,8 +13,6 @@
 #include "flexboard.dtsi"
 
 / {
-	model = "FlexBoard (full size)";
-	compatible = "flexboard-full";
-
+	model = "FlexBoard";
+	compatible = "flexboard";
 };
-

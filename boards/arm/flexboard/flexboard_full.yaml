@@ -1,5 +1,5 @@
-identifier: flexeval
-name: Flexboard
+identifier: flexboard_full
+name: Flexboard (Full)
 type: mcu
 arch: arm
 ram: 64

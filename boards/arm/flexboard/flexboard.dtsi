@@ -4,17 +4,12 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-/dts-v1/;
-
 #include <zephyr/dt-bindings/gpio/gpio.h>
 #include <nxp/nxp_k22fxq512.dtsi>
 
 #include "flexboard-pinctrl.dtsi"
 
 / {
-	model = "FlexBoard";
-	compatible = "flexboard";
-
 	aliases {
 		mcuboot-button0 = &key23;
 	};
