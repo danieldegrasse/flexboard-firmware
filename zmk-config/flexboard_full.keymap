@@ -10,36 +10,174 @@
 #define DEFAULT 0
 
 / {
+	macros {
+		macro_g1: macro-g1 {
+			compatible = "zmk,behavior-macro";
+			label = "ZM_macro_g1";
+			#binding-cells = <0>;
+			bindings = <&macro_tap &kp G &kp N1>;
+			behavior-id = <BEHAVIOR_NONE>;
+		};
+		macro_g2: macro-g2 {
+			compatible = "zmk,behavior-macro";
+			label = "ZM_macro_g2";
+			#binding-cells = <0>;
+			bindings = <&macro_tap &kp G &kp N2>;
+			behavior-id = <BEHAVIOR_NONE>;
+		};
+		macro_g3: macro-g3 {
+			compatible = "zmk,behavior-macro";
+			label = "ZM_macro_g3";
+			#binding-cells = <0>;
+			bindings = <&macro_tap &kp G &kp N3>;
+			behavior-id = <BEHAVIOR_NONE>;
+		};
+		macro_g4: macro-g4 {
+			compatible = "zmk,behavior-macro";
+			label = "ZM_macro_g4";
+			#binding-cells = <0>;
+			bindings = <&macro_tap &kp G &kp N4>;
+			behavior-id = <BEHAVIOR_NONE>;
+		};
+		macro_m1: macro-m1 {
+			compatible = "zmk,behavior-macro";
+			label = "ZM_macro_m1";
+			#binding-cells = <0>;
+			bindings = <&macro_tap &kp M &kp N1>;
+			behavior-id = <BEHAVIOR_NONE>;
+		};
+		macro_m2: macro-m2 {
+			compatible = "zmk,behavior-macro";
+			label = "ZM_macro_m2";
+			#binding-cells = <0>;
+			bindings = <&macro_tap &kp M &kp N2>;
+			behavior-id = <BEHAVIOR_NONE>;
+		};
+		macro_m3: macro-m3 {
+			compatible = "zmk,behavior-macro";
+			label = "ZM_macro_m3";
+			#binding-cells = <0>;
+			bindings = <&macro_tap &kp M &kp N3>;
+			behavior-id = <BEHAVIOR_NONE>;
+		};
+		macro_m4: macro-m4 {
+			compatible = "zmk,behavior-macro";
+			label = "ZM_macro_m4";
+			#binding-cells = <0>;
+			bindings = <&macro_tap &kp M &kp N4>;
+			behavior-id = <BEHAVIOR_NONE>;
+		};
+		macro_m5: macro-m5 {
+			compatible = "zmk,behavior-macro";
+			label = "ZM_macro_m5";
+			#binding-cells = <0>;
+			bindings = <&macro_tap &kp M &kp N5>;
+			behavior-id = <BEHAVIOR_NONE>;
+		};
+		macro_m6: macro-m6 {
+			compatible = "zmk,behavior-macro";
+			label = "ZM_macro_m6";
+			#binding-cells = <0>;
+			bindings = <&macro_tap &kp M &kp N6>;
+			behavior-id = <BEHAVIOR_NONE>;
+		};
+		macro_m7: macro-m7 {
+			compatible = "zmk,behavior-macro";
+			label = "ZM_macro_m7";
+			#binding-cells = <0>;
+			bindings = <&macro_tap &kp M &kp N7>;
+			behavior-id = <BEHAVIOR_NONE>;
+		};
+		macro_m8: macro-m8 {
+			compatible = "zmk,behavior-macro";
+			label = "ZM_macro_m8";
+			#binding-cells = <0>;
+			bindings = <&macro_tap &kp M &kp N8>;
+			behavior-id = <BEHAVIOR_NONE>;
+		};
+		macro_m9: macro-m9 {
+			compatible = "zmk,behavior-macro";
+			label = "ZM_macro_m9";
+			#binding-cells = <0>;
+			bindings = <&macro_tap &kp M &kp N9>;
+			behavior-id = <BEHAVIOR_NONE>;
+		};
+		macro_m10: macro-m10 {
+			compatible = "zmk,behavior-macro";
+			label = "ZM_macro_m10";
+			#binding-cells = <0>;
+			bindings = <&macro_tap &kp M &kp N1 &kp N0>;
+			behavior-id = <BEHAVIOR_NONE>;
+		};
+		macro_nw: macro-nw {
+			compatible = "zmk,behavior-macro";
+			label = "ZM_macro_nw";
+			#binding-cells = <0>;
+			bindings = <&macro_tap &kp UP_ARROW &kp LEFT_ARROW>;
+			behavior-id = <BEHAVIOR_NONE>;
+		};
+		macro_ne: macro-ne {
+			compatible = "zmk,behavior-macro";
+			label = "ZM_macro_ne";
+			#binding-cells = <0>;
+			bindings = <&macro_tap &kp UP_ARROW &kp RIGHT_ARROW>;
+			behavior-id = <BEHAVIOR_NONE>;
+		};
+		macro_sw: macro-sw {
+			compatible = "zmk,behavior-macro";
+			label = "ZM_macro_sw";
+			#binding-cells = <0>;
+			bindings = <&macro_tap &kp DOWN_ARROW &kp LEFT_ARROW>;
+			behavior-id = <BEHAVIOR_NONE>;
+		};
+		macro_se: macro-se {
+			compatible = "zmk,behavior-macro";
+			label = "ZM_macro_se";
+			#binding-cells = <0>;
+			bindings = <&macro_tap &kp DOWN_ARROW &kp RIGHT_ARROW>;
+			behavior-id = <BEHAVIOR_NONE>;
+		};
+	};
+
 	keymap {
 		compatible = "zmk,keymap";
 
 		/* Default layer */
 		default_layer {
 			bindings = <
-			&kp A &kp A &kp A &kp A &kp A &kp A &kp A &kp A &kp A
-			&kp A &kp A &kp A &kp A &kp A &kp A &kp A &kp A &kp A
-			&kp A &kp A &kp A &kp A &kp A &kp A &kp A &kp A &kp A
-			&kp A &kp A &kp A &kp A &kp A &kp A &kp A &kp A
-			&kp ESC &kp F1 &kp F2 &kp F3 &kp F4 &kp F5 &kp F6 &kp F7
-			&kp F8 &kp F9 &kp F10 &kp F11 &kp F12 &kp PSCRN &kp SLCK
-			&kp PAUSE_BREAK &kp C_MUTE &kp C_VOL_DN &kp C_VOL_UP
+			&macro_g1 &macro_g2 &kp F13 &kp F14 &kp F15 &kp F16
+			&kp F17 &kp F18 &kp F19 &kp F20 &kp F21 &kp F22 &kp F23
+			&kp F24 &kp C_PREV &kp C_PP &kp C_FF &kp C_MUTE
+			&kp C_VOL_DN &kp C_VOL_UP
+
+			&macro_g3 &macro_g4 &kp ESC &kp F1 &kp F2 &kp F3 &kp F4
+			&kp F5 &kp F6 &kp F7 &kp F8 &kp F9 &kp F10 &kp F11 &kp
+			F12 &kp PSCRN &kp SLCK &kp PAUSE_BREAK &kp C_MUTE
 			&kp SYSTEM_SLEEP
-			&kp GRAVE &kp N1 &kp N2 &kp N3 &kp N4 &kp N5 &kp N6
-			&kp N7 &kp N8 &kp N9 &kp N0 &kp MINUS &kp EQUAL &kp BSPC
-			&kp INS &kp HOME &kp PG_UP &kp D &kp E &kp F &kp KP_NUMLOCK
-			&kp TAB &kp Q &kp W &kp E &kp R &kp T &kp Y &kp U &kp I
-			&kp O &kp P &kp LBKT &kp RBKT &kp BSLH &kp DEL &kp END
-			&kp PG_DN &kp A &kp B &kp C &kp KP_N0
-			&kp CAPS &kp A &kp S &kp D &kp F &kp G &kp H &kp J &kp K
-			&kp L &kp SEMI &kp SQT &kp ENTER &kp KP_N7 &kp KP_N8
-			&kp KP_N9 &kp X
-			&kp LSHIFT &kp Z &kp X &kp C &kp V &kp B &kp N &kp M
-			&kp COMMA &kp PERIOD &kp SLASH &kp RSHIFT &kp UP_ARROW
-			&kp KP_N4 &kp KP_N5 &kp KP_N6
-			&kp LCTRL &kp LWIN &kp LALT &kp SPACE &kp RALT &kp RWIN
-			&mo DEFAULT &kp LCTRL &kp LEFT_ARROW &kp DOWN_ARROW
-			&kp RIGHT_ARROW &kp KP_N1 &kp KP_N2 &kp KP_N3
-			&kp KP_ENTER>;
+
+			&macro_m1 &macro_m2 &kp GRAVE &kp N1 &kp N2 &kp N3 &kp
+			N4 &kp N5 &kp N6 &kp N7 &kp N8 &kp N9 &kp N0 &kp MINUS
+			&kp EQUAL &kp BSPC &kp INS &kp HOME &kp PG_UP &kp
+			KP_NUMLOCK &kp KP_DIVIDE &kp KP_MULTIPLY &kp KP_MINUS
+
+			&macro_m3 &macro_m4 &kp TAB &kp Q &kp W &kp E &kp R &kp
+			T &kp Y &kp U &kp I &kp O &kp P &kp LBKT &kp RBKT &kp
+			BSLH &kp DEL &kp END &kp PG_DN &kp KP_N7 &kp KP_N8 &kp
+			KP_N9 &kp KP_PLUS
+
+			&macro_m5 &macro_m6 &kp CAPS &kp A &kp S &kp D &kp F
+			&kp G &kp H &kp J &kp K &kp L &kp SEMI &kp SQT &kp
+			ENTER &macro_ne &kp UP_ARROW &macro_ne &kp KP_N4 &kp
+			KP_N5 &kp KP_N6 &kp KP_EQUAL
+
+			&macro_m7 &macro_m8 &kp LSHIFT &kp Z &kp X &kp C &kp V
+			&kp B &kp N &kp M &kp COMMA &kp PERIOD &kp SLASH &kp
+			RSHIFT &kp LEFT_ARROW &kp SLCK &kp RIGHT_ARROW &kp
+			KP_N1 &kp KP_N2 &kp KP_N3
+
+			&macro_m9 &macro_m10 &kp LCTRL &kp LWIN &kp LALT &kp SPACE &kp RALT &kp RWIN
+			&mo DEFAULT &kp LCTRL &macro_sw &kp DOWN_ARROW &macro_se
+			&kp KP_N0 &kp KP_COMMA &kp KP_DOT &kp KP_ENTER>;
 		};
 	};
 };
