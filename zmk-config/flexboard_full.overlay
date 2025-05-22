@@ -164,12 +164,27 @@
 #define KEY_152 RC(0,22)
 #define KEY_153 RC(0,23)
 
+/*
+ * Key zone definition. These indices are used by the animation driver to
+ * determine which keys to render pixels for. Since we utilize the
+ * chain-reserved-ranges property, the zone for all keys has a 1:1 mapping
+ * with the pixel list
+ */
+#define ZONE_KEYS 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 \
+	24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 \
+	48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 \
+	72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 \
+	96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 \
+	115 116 117 118 119 120 121 122 123 124 125 126 127 128 129 130 131 132 \
+	133 134 135 136 137 138 139 140 141 142 143 144
+
 
 / {
 	chosen {
 		zmk,kscan = &kscan0;
 		zmk,watchdog = &wdog;
 		zmk,matrix_transform = &flexboard_full_transform;
+		zmk,animation = &root_animation;
 	};
 
 	flexboard_full_transform: keymap_transform_1 {
@@ -225,5 +240,250 @@
 			<&gpioa 5 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>, 	/* COL_22 */
 			<&gpioe 27 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>, 	/* COL_23 */
 			<&gpioe 26 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>;	/* COL_24 */
+	};
+
+	/*
+	 * Pixel definitions are given with coordinates ranging from 0-255.
+	 * on the Flexboard, the LED controller is wired such that two columns
+	 * of keys share each LED sink line. The LED sink lines are wired in
+	 * reverse, so the rightmost column uses LED sink 0.
+	 */
+	animation {
+		compatible = "zmk,animation";
+		drivers = <&led_ctrl>;
+		chain-lengths = <192>;
+		pixels = /* LED_SINK_12, LED_SOURCE_1 is not populated */
+			/* LED_SINK_12, LED_SOURCE_2 is not populated */
+			/* LED_SINK_12, LED_SOURCE_3 is not populated */
+			/* LED_SINK_12, LED_SOURCE_4 is not populated */
+			<&pixel 243 85>, /* LED_SINK_12, LED_SOURCE_5  (KEY_66, 0) */
+			<&pixel 255 85>, /* LED_SINK_12, LED_SOURCE_6  (KEY_67, 1) */
+			<&pixel 243 127>, /* LED_SINK_12, LED_SOURCE_7  (KEY_89, 2) */
+			<&pixel 255 127>, /* LED_SINK_12, LED_SOURCE_8  (KEY_90, 3) */
+			<&pixel 243 170>, /* LED_SINK_12, LED_SOURCE_9  (KEY_111, 4) */
+			<&pixel 255 170>, /* LED_SINK_12, LED_SOURCE_10  (KEY_112, 5) */
+			<&pixel 243 212>, /* LED_SINK_12, LED_SOURCE_11  (KEY_132, 6) */
+			/* LED_SINK_12, LED_SOURCE_12 is not populated */
+			<&pixel 243 255>, /* LED_SINK_12, LED_SOURCE_13  (KEY_148, 7) */
+			<&pixel 255 255>, /* LED_SINK_12, LED_SOURCE_14  (KEY_149, 8) */
+			/* LED_SINK_12, LED_SOURCE_15 is not populated */
+			/* LED_SINK_12, LED_SOURCE_16 is not populated */
+			/* LED_SINK_11, LED_SOURCE_1 is not populated */
+			/* LED_SINK_11, LED_SOURCE_2 is not populated */
+			/* LED_SINK_11, LED_SOURCE_3 is not populated */
+			/* LED_SINK_11, LED_SOURCE_4 is not populated */
+			<&pixel 221 85>, /* LED_SINK_11, LED_SOURCE_5  (KEY_64, 9) */
+			<&pixel 232 85>, /* LED_SINK_11, LED_SOURCE_6  (KEY_65, 10) */
+			<&pixel 221 127>, /* LED_SINK_11, LED_SOURCE_7  (KEY_87, 11) */
+			<&pixel 232 127>, /* LED_SINK_11, LED_SOURCE_8  (KEY_88, 12) */
+			<&pixel 221 170>, /* LED_SINK_11, LED_SOURCE_9  (KEY_109, 13) */
+			<&pixel 232 170>, /* LED_SINK_11, LED_SOURCE_10  (KEY_110, 14) */
+			<&pixel 221 212>, /* LED_SINK_11, LED_SOURCE_11  (KEY_130, 15) */
+			<&pixel 232 212>, /* LED_SINK_11, LED_SOURCE_12  (KEY_131, 16) */
+			<&pixel 221 255>, /* LED_SINK_11, LED_SOURCE_13  (KEY_146, 17) */
+			<&pixel 232 255>, /* LED_SINK_11, LED_SOURCE_14  (KEY_147, 18) */
+			/* LED_SINK_11, LED_SOURCE_15 is not populated */
+			/* LED_SINK_11, LED_SOURCE_16 is not populated */
+			<&pixel 199 0>, /* LED_SINK_10, LED_SOURCE_1  (KEY_19, 19) */
+			<&pixel 210 0>, /* LED_SINK_10, LED_SOURCE_2  (KEY_20, 20) */
+			<&pixel 199 42>, /* LED_SINK_10, LED_SOURCE_3  (KEY_39, 21) */
+			<&pixel 210 42>, /* LED_SINK_10, LED_SOURCE_4  (KEY_40, 22) */
+			<&pixel 199 85>, /* LED_SINK_10, LED_SOURCE_5  (KEY_62, 23) */
+			<&pixel 210 85>, /* LED_SINK_10, LED_SOURCE_6  (KEY_63, 24) */
+			<&pixel 199 127>, /* LED_SINK_10, LED_SOURCE_7  (KEY_85, 25) */
+			<&pixel 210 127>, /* LED_SINK_10, LED_SOURCE_8  (KEY_86, 26) */
+			<&pixel 199 170>, /* LED_SINK_10, LED_SOURCE_9  (KEY_107, 27) */
+			<&pixel 210 170>, /* LED_SINK_10, LED_SOURCE_10  (KEY_108, 28) */
+			<&pixel 199 212>, /* LED_SINK_10, LED_SOURCE_11  (KEY_128, 29) */
+			<&pixel 210 212>, /* LED_SINK_10, LED_SOURCE_12  (KEY_129, 30) */
+			<&pixel 199 255>, /* LED_SINK_10, LED_SOURCE_13  (KEY_144, 31) */
+			<&pixel 210 255>, /* LED_SINK_10, LED_SOURCE_14  (KEY_145, 32) */
+			/* LED_SINK_10, LED_SOURCE_15 is not populated */
+			/* LED_SINK_10, LED_SOURCE_16 is not populated */
+			<&pixel 177 0>, /* LED_SINK_9, LED_SOURCE_1  (KEY_17, 33) */
+			<&pixel 188 0>, /* LED_SINK_9, LED_SOURCE_2  (KEY_18, 34) */
+			<&pixel 177 42>, /* LED_SINK_9, LED_SOURCE_3  (KEY_37, 35) */
+			<&pixel 188 42>, /* LED_SINK_9, LED_SOURCE_4  (KEY_38, 36) */
+			<&pixel 177 85>, /* LED_SINK_9, LED_SOURCE_5  (KEY_60, 37) */
+			<&pixel 188 85>, /* LED_SINK_9, LED_SOURCE_6  (KEY_61, 38) */
+			<&pixel 177 127>, /* LED_SINK_9, LED_SOURCE_7  (KEY_83, 39) */
+			<&pixel 188 127>, /* LED_SINK_9, LED_SOURCE_8  (KEY_84, 40) */
+			<&pixel 177 170>, /* LED_SINK_9, LED_SOURCE_9  (KEY_105, 41) */
+			<&pixel 188 170>, /* LED_SINK_9, LED_SOURCE_10  (KEY_106, 42) */
+			<&pixel 177 212>, /* LED_SINK_9, LED_SOURCE_11  (KEY_126, 43) */
+			<&pixel 188 212>, /* LED_SINK_9, LED_SOURCE_12  (KEY_127, 44) */
+			<&pixel 177 255>, /* LED_SINK_9, LED_SOURCE_13  (KEY_142, 45) */
+			<&pixel 188 255>, /* LED_SINK_9, LED_SOURCE_14  (KEY_143, 46) */
+			/* LED_SINK_9, LED_SOURCE_15 is not populated */
+			/* LED_SINK_9, LED_SOURCE_16 is not populated */
+			<&pixel 155 0>, /* LED_SINK_8, LED_SOURCE_1  (KEY_15, 47) */
+			<&pixel 166 0>, /* LED_SINK_8, LED_SOURCE_2  (KEY_16, 48) */
+			<&pixel 155 42>, /* LED_SINK_8, LED_SOURCE_3  (KEY_35, 49) */
+			<&pixel 166 42>, /* LED_SINK_8, LED_SOURCE_4  (KEY_36, 50) */
+			<&pixel 155 85>, /* LED_SINK_8, LED_SOURCE_5  (KEY_59, 51) */
+			/* LED_SINK_8, LED_SOURCE_6 is not populated */
+			<&pixel 155 127>, /* LED_SINK_8, LED_SOURCE_7  (KEY_82, 52) */
+			/* LED_SINK_8, LED_SOURCE_8 is not populated */
+			/* LED_SINK_8, LED_SOURCE_9 is not populated */
+			/* LED_SINK_8, LED_SOURCE_10 is not populated */
+			/* LED_SINK_8, LED_SOURCE_11 is not populated */
+			/* LED_SINK_8, LED_SOURCE_12 is not populated */
+			/* LED_SINK_8, LED_SOURCE_13 is not populated */
+			/* LED_SINK_8, LED_SOURCE_14 is not populated */
+			/* LED_SINK_8, LED_SOURCE_15 is not populated */
+			/* LED_SINK_8, LED_SOURCE_16 is not populated */
+			<&pixel 133 0>, /* LED_SINK_7, LED_SOURCE_1  (KEY_13, 53) */
+			<&pixel 144 0>, /* LED_SINK_7, LED_SOURCE_2  (KEY_14, 54) */
+			<&pixel 133 42>, /* LED_SINK_7, LED_SOURCE_3  (KEY_33, 55) */
+			<&pixel 144 42>, /* LED_SINK_7, LED_SOURCE_4  (KEY_34, 56) */
+			<&pixel 133 85>, /* LED_SINK_7, LED_SOURCE_5  (KEY_57, 57) */
+			<&pixel 144 85>, /* LED_SINK_7, LED_SOURCE_6  (KEY_58, 58) */
+			<&pixel 133 127>, /* LED_SINK_7, LED_SOURCE_7  (KEY_80, 59) */
+			<&pixel 144 127>, /* LED_SINK_7, LED_SOURCE_8  (KEY_81, 60) */
+			<&pixel 133 170>, /* LED_SINK_7, LED_SOURCE_9  (KEY_103, 61) */
+			<&pixel 144 170>, /* LED_SINK_7, LED_SOURCE_10  (KEY_104, 62) */
+			<&pixel 133 212>, /* LED_SINK_7, LED_SOURCE_11  (KEY_125, 63) */
+			/* LED_SINK_7, LED_SOURCE_12 is not populated */
+			<&pixel 133 255>, /* LED_SINK_7, LED_SOURCE_13  (KEY_140, 64) */
+			<&pixel 144 255>, /* LED_SINK_7, LED_SOURCE_14  (KEY_141, 65) */
+			/* LED_SINK_7, LED_SOURCE_15 is not populated */
+			/* LED_SINK_7, LED_SOURCE_16 is not populated */
+			<&pixel 110 0>, /* LED_SINK_6, LED_SOURCE_1  (KEY_11, 66) */
+			<&pixel 121 0>, /* LED_SINK_6, LED_SOURCE_2  (KEY_12, 67) */
+			<&pixel 110 42>, /* LED_SINK_6, LED_SOURCE_3  (KEY_31, 68) */
+			<&pixel 121 42>, /* LED_SINK_6, LED_SOURCE_4  (KEY_32, 69) */
+			<&pixel 110 85>, /* LED_SINK_6, LED_SOURCE_5  (KEY_55, 70) */
+			<&pixel 121 85>, /* LED_SINK_6, LED_SOURCE_6  (KEY_56, 71) */
+			<&pixel 110 127>, /* LED_SINK_6, LED_SOURCE_7  (KEY_78, 72) */
+			<&pixel 121 127>, /* LED_SINK_6, LED_SOURCE_8  (KEY_79, 73) */
+			<&pixel 110 170>, /* LED_SINK_6, LED_SOURCE_9  (KEY_101, 74) */
+			<&pixel 121 170>, /* LED_SINK_6, LED_SOURCE_10  (KEY_102, 75) */
+			<&pixel 110 212>, /* LED_SINK_6, LED_SOURCE_11  (KEY_123, 76) */
+			<&pixel 121 212>, /* LED_SINK_6, LED_SOURCE_12  (KEY_124, 77) */
+			/* LED_SINK_6, LED_SOURCE_13 is not populated */
+			<&pixel 121 255>, /* LED_SINK_6, LED_SOURCE_14  (KEY_139, 78) */
+			/* LED_SINK_6, LED_SOURCE_15 is not populated */
+			/* LED_SINK_6, LED_SOURCE_16 is not populated */
+			<&pixel 88 0>, /* LED_SINK_5, LED_SOURCE_1  (KEY_9, 79) */
+			<&pixel 99 0>, /* LED_SINK_5, LED_SOURCE_2  (KEY_10, 80) */
+			<&pixel 88 42>, /* LED_SINK_5, LED_SOURCE_3  (KEY_29, 81) */
+			<&pixel 99 42>, /* LED_SINK_5, LED_SOURCE_4  (KEY_30, 82) */
+			<&pixel 88 85>, /* LED_SINK_5, LED_SOURCE_5  (KEY_53, 83) */
+			<&pixel 99 85>, /* LED_SINK_5, LED_SOURCE_6  (KEY_54, 84) */
+			<&pixel 88 127>, /* LED_SINK_5, LED_SOURCE_7  (KEY_76, 85) */
+			<&pixel 99 127>, /* LED_SINK_5, LED_SOURCE_8  (KEY_77, 86) */
+			<&pixel 88 170>, /* LED_SINK_5, LED_SOURCE_9  (KEY_99, 87) */
+			<&pixel 99 170>, /* LED_SINK_5, LED_SOURCE_10  (KEY_100, 88) */
+			<&pixel 88 212>, /* LED_SINK_5, LED_SOURCE_11  (KEY_121, 89) */
+			<&pixel 99 212>, /* LED_SINK_5, LED_SOURCE_12  (KEY_122, 90) */
+			/* LED_SINK_5, LED_SOURCE_13 is not populated */
+			/* LED_SINK_5, LED_SOURCE_14 is not populated */
+			/* LED_SINK_5, LED_SOURCE_15 is not populated */
+			/* LED_SINK_5, LED_SOURCE_16 is not populated */
+			<&pixel 66 0>, /* LED_SINK_4, LED_SOURCE_1  (KEY_7, 91) */
+			<&pixel 77 0>, /* LED_SINK_4, LED_SOURCE_2  (KEY_8, 92) */
+			<&pixel 66 42>, /* LED_SINK_4, LED_SOURCE_3  (KEY_27, 93) */
+			<&pixel 77 42>, /* LED_SINK_4, LED_SOURCE_4  (KEY_28, 94) */
+			<&pixel 66 85>, /* LED_SINK_4, LED_SOURCE_5  (KEY_51, 95) */
+			<&pixel 77 85>, /* LED_SINK_4, LED_SOURCE_6  (KEY_52, 96) */
+			<&pixel 66 127>, /* LED_SINK_4, LED_SOURCE_7  (KEY_74, 97) */
+			<&pixel 77 127>, /* LED_SINK_4, LED_SOURCE_8  (KEY_75, 98) */
+			<&pixel 66 170>, /* LED_SINK_4, LED_SOURCE_9  (KEY_97, 99) */
+			<&pixel 77 170>, /* LED_SINK_4, LED_SOURCE_10  (KEY_98, 100) */
+			<&pixel 66 212>, /* LED_SINK_4, LED_SOURCE_11  (KEY_119, 101) */
+			<&pixel 77 212>, /* LED_SINK_4, LED_SOURCE_12  (KEY_120, 102) */
+			/* LED_SINK_4, LED_SOURCE_13 is not populated */
+			<&pixel 77 255>, /* LED_SINK_4, LED_SOURCE_14  (KEY_138, 103) */
+			/* LED_SINK_4, LED_SOURCE_15 is not populated */
+			/* LED_SINK_4, LED_SOURCE_16 is not populated */
+			<&pixel 44 0>, /* LED_SINK_3, LED_SOURCE_1  (KEY_5, 104) */
+			<&pixel 55 0>, /* LED_SINK_3, LED_SOURCE_2  (KEY_6, 105) */
+			<&pixel 44 42>, /* LED_SINK_3, LED_SOURCE_3  (KEY_25, 106) */
+			<&pixel 55 42>, /* LED_SINK_3, LED_SOURCE_4  (KEY_26, 107) */
+			<&pixel 44 85>, /* LED_SINK_3, LED_SOURCE_5  (KEY_49, 108) */
+			<&pixel 55 85>, /* LED_SINK_3, LED_SOURCE_6  (KEY_50, 109) */
+			<&pixel 44 127>, /* LED_SINK_3, LED_SOURCE_7  (KEY_72, 110) */
+			<&pixel 55 127>, /* LED_SINK_3, LED_SOURCE_8  (KEY_73, 111) */
+			<&pixel 44 170>, /* LED_SINK_3, LED_SOURCE_9  (KEY_95, 112) */
+			<&pixel 55 170>, /* LED_SINK_3, LED_SOURCE_10  (KEY_96, 113) */
+			<&pixel 44 212>, /* LED_SINK_3, LED_SOURCE_11  (KEY_117, 114) */
+			<&pixel 55 212>, /* LED_SINK_3, LED_SOURCE_12  (KEY_118, 115) */
+			<&pixel 44 255>, /* LED_SINK_3, LED_SOURCE_13  (KEY_137, 116) */
+			/* LED_SINK_3, LED_SOURCE_14 is not populated */
+			/* LED_SINK_3, LED_SOURCE_15 is not populated */
+			/* LED_SINK_3, LED_SOURCE_16 is not populated */
+			<&pixel 22 0>, /* LED_SINK_2, LED_SOURCE_1  (KEY_3, 117) */
+			<&pixel 33 0>, /* LED_SINK_2, LED_SOURCE_2  (KEY_4, 118) */
+			<&pixel 22 42>, /* LED_SINK_2, LED_SOURCE_3  (KEY_23, 119) */
+			<&pixel 33 42>, /* LED_SINK_2, LED_SOURCE_4  (KEY_24, 120) */
+			<&pixel 22 85>, /* LED_SINK_2, LED_SOURCE_5  (KEY_47, 121) */
+			<&pixel 33 85>, /* LED_SINK_2, LED_SOURCE_6  (KEY_48, 122) */
+			<&pixel 22 127>, /* LED_SINK_2, LED_SOURCE_7  (KEY_70, 123) */
+			<&pixel 33 127>, /* LED_SINK_2, LED_SOURCE_8  (KEY_71, 124) */
+			<&pixel 22 170>, /* LED_SINK_2, LED_SOURCE_9  (KEY_93, 125) */
+			<&pixel 33 170>, /* LED_SINK_2, LED_SOURCE_10  (KEY_94, 126) */
+			<&pixel 22 212>, /* LED_SINK_2, LED_SOURCE_11  (KEY_115, 127) */
+			<&pixel 33 212>, /* LED_SINK_2, LED_SOURCE_12  (KEY_116, 128) */
+			<&pixel 22 255>, /* LED_SINK_2, LED_SOURCE_13  (KEY_135, 129) */
+			<&pixel 33 255>, /* LED_SINK_2, LED_SOURCE_14  (KEY_136, 130) */
+			/* LED_SINK_2, LED_SOURCE_15 is not populated */
+			/* LED_SINK_2, LED_SOURCE_16 is not populated */
+			<&pixel 0 0>, /* LED_SINK_1, LED_SOURCE_1  (KEY_1, 131) */
+			<&pixel 11 0>, /* LED_SINK_1, LED_SOURCE_2  (KEY_2, 132) */
+			<&pixel 0 42>, /* LED_SINK_1, LED_SOURCE_3  (KEY_21, 133) */
+			<&pixel 11 42>, /* LED_SINK_1, LED_SOURCE_4  (KEY_22, 134) */
+			<&pixel 0 85>, /* LED_SINK_1, LED_SOURCE_5  (KEY_45, 135) */
+			<&pixel 11 85>, /* LED_SINK_1, LED_SOURCE_6  (KEY_46, 136) */
+			<&pixel 0 127>, /* LED_SINK_1, LED_SOURCE_7  (KEY_68, 137) */
+			<&pixel 11 127>, /* LED_SINK_1, LED_SOURCE_8  (KEY_69, 138) */
+			<&pixel 0 170>, /* LED_SINK_1, LED_SOURCE_9  (KEY_91, 139) */
+			<&pixel 11 170>, /* LED_SINK_1, LED_SOURCE_10  (KEY_92, 140) */
+			<&pixel 0 212>, /* LED_SINK_1, LED_SOURCE_11  (KEY_113, 141) */
+			<&pixel 11 212>, /* LED_SINK_1, LED_SOURCE_12  (KEY_114, 142) */
+			<&pixel 0 255>, /* LED_SINK_1, LED_SOURCE_13  (KEY_133, 143) */
+			<&pixel 11 255> /* LED_SINK_1, LED_SOURCE_14  (KEY_134, 144) */
+			/* LED_SINK_1, LED_SOURCE_15 is not populated */
+			/* LED_SINK_1, LED_SOURCE_16 is not populated */;
+		chain-reserved-ranges =  <1 4>, <12 1>, <15 6>, <31 2>, <47 2>,
+				<63 2>, <70 1>, <72 9>, <92 1>, <95 2>, <109 1>,
+				<111 2>, <125 4>, <141 1>, <143 2>, <158 3>,
+				<175 2>, <191 2>;
+		key-pixels = < 131 132 117 118 104 105 91 92 79 80 66
+			67 53 54 47 48 33 34 19 20 133 134 119 120
+			106 107 93 94 81 82 68 69 55 56 49 50 35 36 21
+			22 135 136 121 122 108 109 95 96 83 84 70
+			71 57 58 51 37 38 23 24 9 10 0 1 137 138 123
+			124 110 111 97 98 85 86 72 73 59 60 52 39 40
+			25 26 11 12 2 3 139 140 125 126 112 113 99
+			100 87 88 74 75 61 62 41 42 27 28 13 14 4 5 141
+			142 127 128 114 115 101 102 89 90 76 77 63
+			43 44 29 30 15 16 6 143 144 129 130 116 103
+			78 64 65 45 46 31 32 17 18 7 8>;
+	};
+
+	root_animation: root-animation {
+		compatible = "zmk,animation-control";
+		label = "ANIMATION_CTRL_0";
+		animations = <&solid &ripple_effect>;
+	};
+
+
+	ripple_effect: ripple-animation {
+		compatible = "zmk,animation-ripple";
+		status = "okay";
+		pixels = <ZONE_KEYS>;
+		blending-mode = <BLENDING_MODE_NORMAL>;
+		duration = <1000>;
+		color = <HSL(0, 0, 100)>;
+		ripple-width = <50>;
+	};
+
+	solid: solid-animation {
+		compatible = "zmk,animation-solid";
+		status = "okay";
+		pixels = <ZONE_KEYS>;
+		duration = <1>;
+		blending-mode = <BLENDING_MODE_NORMAL>;
+		colors = <HSL(0, 0, 100)>;
 	};
 };

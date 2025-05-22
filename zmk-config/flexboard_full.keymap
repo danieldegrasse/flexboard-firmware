@@ -167,7 +167,7 @@
 
 			&macro_m5 &macro_m6 &kp CAPS &kp A &kp S &kp D &kp F
 			&kp G &kp H &kp J &kp K &kp L &kp SEMI &kp SQT &kp
-			ENTER &macro_ne &kp UP_ARROW &macro_ne &kp KP_N4 &kp
+			ENTER &macro_nw &kp UP_ARROW &macro_ne &kp KP_N4 &kp
 			KP_N5 &kp KP_N6 &kp KP_EQUAL
 
 			&macro_m7 &macro_m8 &kp LSHIFT &kp Z &kp X &kp C &kp V
@@ -175,7 +175,8 @@
 			RSHIFT &kp LEFT_ARROW &kp SLCK &kp RIGHT_ARROW &kp
 			KP_N1 &kp KP_N2 &kp KP_N3
 
-			&macro_m9 &macro_m10 &kp LCTRL &kp LWIN &kp LALT &kp SPACE &kp RALT &kp RWIN
+			&macro_m9 &animation ANIMATION_NEXT(0)
+			&kp LCTRL &kp LWIN &kp LALT &kp SPACE &kp RALT &kp RWIN
 			&mo DEFAULT &kp LCTRL &macro_sw &kp DOWN_ARROW &macro_se
 			&kp KP_N0 &kp KP_COMMA &kp KP_DOT &kp KP_ENTER>;
 		};
